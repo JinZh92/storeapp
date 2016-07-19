@@ -1,0 +1,27 @@
+site map
+
+1. main page
+ a. product page -> do categories with the product page
+
+ b. cart (only display once product is added)
+ 	- check out page
+ 		- order confirmation
+
+ c. admin login
+ 	- login page
+ 	- admin management page
+	 	- admin product list view
+	 	- order history
+	 	- edit product information, inventories
+	 	- add new product to the main product page
+
+ d. search product
+
+ 2. nav bar options
+ 	-left: logo
+ 	-right: 
+ 		a. menu
+ 		b. all products
+ 		c. my cart (hidden by default)
+ 		d. admin login
+ 		e. search (within all product)
