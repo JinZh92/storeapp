@@ -2,10 +2,22 @@ site map
 
 1. main page (shop-main.html)
  a. product page -> do categories with the product page
+ 	- single product (pop out)
+ 	- Sorting 
+ 		- orderBy
 
  b. cart (only display once product is added)
- 	- check out page
- 		- order confirmation
+ 	- check out page  (pop out) 
+ 		- input number of products
+ 		- check out
+ 		- continue shopping
+ 	- review purchase (single partial)
+ 		- list of stuff in the cart
+ 			- pay
+ 			- back
+ 		- form collecting shipping info
+ 	- order confirmation
+ 		- generate order id for tracking
 
  c. admin login
  	- login page
@@ -15,19 +27,17 @@ site map
 	 	- edit product information, inventories
 	 	- add new product to the main product page
 
- d. search product
-
-
  2. nav bar options
  	-left: logo
  	-right: 
  		a. menu
+ 			- admin login
  			- contact
  			- about
  		b. all products
  		c. my cart (hidden by default)
- 		d. admin login
  		e. search (within all product)
+
 
  3. Color theme
  	logo

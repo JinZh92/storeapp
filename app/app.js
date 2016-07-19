@@ -13,7 +13,7 @@
 			$stateProvider
 			.state('shop',{
 				url:'/',
-				templateUrl:'site/partials/shop-main.html',
+				templateUrl:'site/draftPartials/shop-main.html',
 				controller:'ShopCtrl as ctrl',
 				//TODO #3 resolve products before main page load
 				resolve:{
@@ -25,7 +25,7 @@
 
 			.state('admin',{
 				url:'/admin',
-				templateUrl:'site/partials/admin.html',
+				templateUrl:'site/draftPartials/admin.html',
 				controller:'AdminCtrl as ctrl',
 				//TODO #2 Resolve Products before admin page load
 				resolve:{
@@ -37,27 +37,46 @@
 
 			.state('admin.dash',{
 				url:'/dashboard',
-				templateUrl:'site/partials/admin-dash.html',
+				templateUrl:'site/draftPartials/admin-dash.html',
 				controller:'AdminCtrl as ctrl',
 			})
 
 			.state('admin.add_product',{
 				url:'/add_product',
 				controller:'ProductCtrl as ctrl',
-				templateUrl:'site/partials/admin-add-product.html'
+				templateUrl:'site/draftPartials/admin-add-product.html'
 			})
 
 			.state('admin.edit_product',{
 				url:'/edit_product/:productId',
 				controller:'ProductCtrl as ctrl',
-				templateUrl:'site/partials/admin-edit-product.html',
+				templateUrl:'site/draftPartials/admin-edit-product.html',
 			})
 
 			.state('auth',{
 				url:'/auth',
-				templateUrl:'site/partials/auth-main.html',
+				templateUrl:'site/draftPartials/auth-main.html',
+				controller:'AuthCtrl as ctrl',
+			})
+
+			.state('order-confirm',{
+				url:'/order-confirm',
+				templateUrl:'site/draftPartials/order-confirm.html',
+				controller:'AuthCtrl as ctrl',
+			})
+
+			.state('product-list',{
+				url:'/product-list',
+				templateUrl:'site/draftPartials/product-list.html',
+				controller:'AuthCtrl as ctrl',
+			})
+
+			.state('review-purchase',{
+				url:'/review-purchase',
+				templateUrl:'site/draftPartials/review-purchase.html',
 				controller:'AuthCtrl as ctrl',
 			});
+
 
 			$httpProvider.interceptors.push(function(){
 		       return {
