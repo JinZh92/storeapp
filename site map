@@ -1,6 +1,6 @@
 site map
 
-1. main page
+1. main page (shop-main.html)
  a. product page -> do categories with the product page
 
  b. cart (only display once product is added)
@@ -28,3 +28,7 @@ site map
  		c. my cart (hidden by default)
  		d. admin login
  		e. search (within all product)
+
+ 3. Color theme
+ 	logo
+ 	products to sell

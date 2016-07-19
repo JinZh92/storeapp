@@ -3,7 +3,7 @@
 		.module('shopApp')
 		.controller('AuthCtrl',AuthCtrl);
 
-	function AuthCtrl($state,api){
+	function AuthCtrl($state,api, $location){
 		var authVm = this;
 
 		authVm.password;
@@ -16,6 +16,7 @@
 
 		//public functions
 		authVm.login = login;
+		authVm.goback = goback;
 
 		function login(){
 
@@ -46,6 +47,10 @@
 				console.log(res);
 				authVm.auth_btn = "Error";
 			})
+		}
+
+		function goback(){
+			$location.path('/');
 		}
 	}
 

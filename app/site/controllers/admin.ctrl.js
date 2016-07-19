@@ -5,7 +5,7 @@
 		.module('shopApp')
 		.controller('AdminCtrl',AdminCtrl);
 
-	function AdminCtrl($scope,$state,productSrv){
+	function AdminCtrl($scope,$state,productSrv, $location){
 		var adminVm = this;
 		adminVm.productSrv = productSrv;
 
@@ -14,10 +14,10 @@
 			$state.go('auth');
 		}
 					
-		adminVm.products;
-		if(adminVm.products.length > 0 ){
-			adminVm.is_products = true;
-		}
+		// adminVm.products;
+		// if(adminVm.products.length > 0 ){
+		// 	adminVm.is_products = true;
+		// }
 
 		//watch for updates to products object
 		$scope.$watch(function(){
@@ -38,8 +38,10 @@
 		}
 
 		function logout(){
+			console.log('Logging out');
 			localStorage.removeItem('authToken');
 			$state.go('auth');
+			// $location.path('/');
 		}
 
 	}
