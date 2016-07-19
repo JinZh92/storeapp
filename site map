@@ -17,10 +17,13 @@ site map
 
  d. search product
 
+
  2. nav bar options
  	-left: logo
  	-right: 
  		a. menu
+ 			- contact
+ 			- about
  		b. all products
  		c. my cart (hidden by default)
  		d. admin login
