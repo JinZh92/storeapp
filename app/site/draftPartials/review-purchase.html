@@ -1,0 +1,178 @@
+<html>
+<head>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.1/angular.js"></script>
+  	<script src="checkout.js"></script>
+  	<link href="css/styles.css" type="text/css" rel="stylesheet" />
+
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+</head>
+
+<body ng-app="reviewApp" ng-controller="reviewCtrl as ctrl">
+
+
+		<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Products</a>
+    </div>
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Cart</a>
+    </div>
+
+     <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Search</a>
+    </div>
+    
+  </div>
+</nav>
+
+<div class="left">
+	<div class="items">
+	<div class=" rows">
+		<div class="container">
+    <div class="well">
+        <div class="page-header">
+            <h3>Checkout</h3>
+        </div>
+ 
+        <table class="table">
+            <tr>
+                <td>
+                    Item1
+                </td>
+                <td>
+                    20000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Item2
+                </td>
+                <td>
+                    5000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Item3
+                </td>
+                <td>
+                    10000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Item4
+                </td>
+                <td>
+                    2000
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Total:</b>
+                </td>
+                <td>
+                    <b>37000</b>
+                </td>
+            </tr>
+        </table>
+ 
+ 
+    </div>
+    <div class="text-left">
+        <a type="button" class="btn btn-danger" href="#/cart">Customize <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
+ 
+    </div>
+</div>
+
+	</div>
+</div>
+
+
+</div>
+
+<div class="right">
+
+	<form role="form">
+
+		<div class="name1">
+	      <label for="usr">First Name:</label>
+	      <input type="text" class="form-control">
+	    </div>
+	   
+	    <div class="name2">
+	      <label for="usr">Last Name:</label>
+	      <input type="text" class="form-control">
+	 	</div>
+
+	 	<div class= "info">
+		    <div class="form-group">
+		      <label for="usr">Address:</label>
+		      <input type="text" class="form-control">
+			</div>
+
+		    <div class="form-group">
+		      <label for="usr">City:</label>
+		      <input type="text" class="form-control">
+		    </div>
+
+		    <div class="form-group">
+		      <label for="usr">Province:</label>
+		      <input type="text" class="form-control">
+		    </div>
+		</div>  
+
+	</form>
+
+
+	<div class="save">
+		<label><input type="checkbox" name="ny"> Save this information for next time</label>
+	</div>
+
+	<div class="button">
+ 		<input type="button" class="btn btn-info" value="Back">
+ 		<input type="submit" class="btn btn-info" value="Pay">
+ 	</div>
+	
+</div>
+
+
+
+
+
+
+</body>
+</html>
