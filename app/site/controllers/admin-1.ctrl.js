@@ -7,8 +7,7 @@
 
     'use strict';
 
-     angular
-        .module('shopApp',[])
+
    
     angular
         .module('shopApp')

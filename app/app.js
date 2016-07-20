@@ -9,7 +9,6 @@
 		.config(function($stateProvider, $httpProvider,$urlRouterProvider){
 			
 			$urlRouterProvider.otherwise('/');
-
 			$stateProvider
 			// -----------Linking the shop main page -------------//
 			.state('shop',{
