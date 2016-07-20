@@ -38,7 +38,6 @@ function ShopMainController($scope,$state, shopMainSrv, $window, $timeout){
 			ctrl.leftHeader = shopMainSrv.leftContent[num].header;
 			ctrl.leftBody = shopMainSrv.leftContent[num].body;
 		});
-		console.log(ctrl.leftHeader)
 	}
 	function gotoproducts(){
 		$state.go('product');
