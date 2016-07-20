@@ -21,21 +21,9 @@
 		}];
 
 		self.rightImage = [
-		{	url: 'assets/img/right-1.jpg',
-			text: ''
-		},
-		{	url: 'assets/img/right-2.jpg',
-			text: ''
-		},
-		{	url:'assets/img/right-3.jpg',
-			text: ''
-		},
-		{	url:'',
-			text: ''
-		},
-		{	url:'',
-			text: ''
-		}
+		'assets/img/right-1.jpg',
+		'assets/img/right-2.jpg',
+		'assets/img/right-3.jpg'
 		]
 	}
 

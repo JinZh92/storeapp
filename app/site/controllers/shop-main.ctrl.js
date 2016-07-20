@@ -11,7 +11,7 @@ function ShopMainController($scope,$state, shopMainSrv, $window, $timeout){
 	ctrl.unhide = unhide;
 	ctrl.hide = hide;
 	ctrl.gotoproducts = gotoproducts;
-
+	ctrl.imageUrl = shopMainSrv.rightImage;
 
 	ctrl.leftHeader = shopMainSrv.leftContent[0].header;
 	ctrl.leftBody = shopMainSrv.leftContent[0].body;

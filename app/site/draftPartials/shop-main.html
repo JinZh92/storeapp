@@ -19,32 +19,8 @@
 </nav>
 
 <div class="right-half">
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 1</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 2</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 3</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 4</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 5</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 6</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 7</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 8</div>
-	</div>
-	<div class="right-image">
-		<div class="right-image-text">I'm Pikachu 9</div>
+	<div ng-repeat="x in ctrl.imageUrl" ng-style="{'background-image':'url({{x}})'}" class="right-image">
+		<div class="right-image-text">I'm a Pikachu</div>
 	</div>
 
 	<div class="right-image right-image-last">
