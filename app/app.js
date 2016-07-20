@@ -65,10 +65,10 @@
 				controller:'AuthCtrl as ctrl',
 			})
 
-			.state('product-list',{
+			.state('product',{
 				url:'/product-list',
 				templateUrl:'site/draftPartials/product-list.html',
-				controller:'AuthCtrl as ctrl',
+				controller:'ProductCtrl as ctrl',
 			})
 
 			.state('review-purchase',{

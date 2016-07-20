@@ -7,91 +7,371 @@
 	function ProductService($state,api){
 		var self = this;
 		//public variables
-		self.products = [];
+		// self.products = [];
+
+		self.products = PRODUCT_DATA;
+		self.getProducts = getProducts;
 
 		//public functions
-		self.getProduct = getProduct;
-		self.getProducts = getProducts;
-		self.addProduct = addProduct;
-		self.updateProduct = updateProduct;
-		self.updateProductList = updateProductList;
-		self.removeProduct = removeProduct;
-		self.deleteProduct = deleteProduct;
+		// self.getProduct = getProduct;
+		// self.getProducts = getProducts;
+		// self.addProduct = addProduct;
+		// self.updateProduct = updateProduct;
+		// self.updateProductList = updateProductList;
+		// self.removeProduct = removeProduct;
+		// self.deleteProduct = deleteProduct;
 
-		function getProducts(){
-			return api.request('/products',{},'GET')
-			.then(function(res){
-				//success callback
-				console.log(res);
-				self.products = res.data.products;
-				return res.data.products;
-			},function(res){
-				//error callback
-				console.log(res);
-				return;
-			})
+		// function getProducts(){
+		// 	return api.request('/products',{},'GET')
+		// 	.then(function(res){
+		// 		//success callback
+		// 		console.log(res);
+		// 		self.products = res.data.products;
+		// 		return res.data.products;
+		// 	},function(res){
+		// 		//error callback
+		// 		console.log(res);
+		// 		return;
+		// 	})
+		// }
+
+		function getProducts() {
+			return self.products;
 		}
 
-		function addProduct(product){
-			api.request('/products',product,'POST')
-			.then(function(res){
-				console.log(res);
-				if(res.status === 200){
-					//product was added successfully
-					self.products.push(res.data.product);
-					state.go('admin.dash');
-				}
-			})
-		}
+		// function addProduct(product){
+		// 	api.request('/products',product,'POST')
+		// 	.then(function(res){
+		// 		console.log(res);
+		// 		if(res.status === 200){
+		// 			//product was added successfully
+		// 			self.products.push(res.data.product);
+		// 			state.go('admin.dash');
+		// 		}
+		// 	})
+		// }
 
-		function updateProduct(product,productId){
-			api.request('/products/'+productId,product,'PUT')
-			.then(function(res){
-				console.log(res);
-				if(res.status === 200){
-					//product was updated successfully
-					self.updateProductList(product,productId);
+		// function updateProduct(product,productId){
+		// 	api.request('/products/'+productId,product,'PUT')
+		// 	.then(function(res){
+		// 		console.log(res);
+		// 		if(res.status === 200){
+		// 			//product was updated successfully
+		// 			self.updateProductList(product,productId);
 					
-				}
-			})
-		}
+		// 		}
+		// 	})
+		// }
 
-		function deleteProduct(productId){
-			api.request('/products/'+productId,{},'DEL')
-			.then(function(res){
-				console.log(res);
-				if(res.status === 200){
-					//product was deleted successfully
-					self.removeProduct(productId);
-					state.go('admin.dash');
+		// function deleteProduct(productId){
+		// 	api.request('/products/'+productId,{},'DEL')
+		// 	.then(function(res){
+		// 		console.log(res);
+		// 		if(res.status === 200){
+		// 			//product was deleted successfully
+		// 			self.removeProduct(productId);
+		// 			state.go('admin.dash');
 					
-				}
-			})
-		}
+		// 		}
+		// 	})
+		// }
 
-		function getProduct(productId){
-			return api.request('/products/'+productId,{},'GET');
-		}
+		// function getProduct(productId){
+		// 	return api.request('/products/'+productId,{},'GET');
+		// }
 
-		function updateProductList(product,productId){
-			for(var i=0;i < self.products.length;i++){
-				if(self.products[i].id == productId){
-					self.products[i].name = product.name;
-					self.products[i].image = product.image;
-					self.products[i].description = product.description;
-					self.products[i].category = product.category;
-					self.products[i].price = product.price;
-					self.products[i].quantity = product.quantity;
-				}
-			}
-		}
+		// function updateProductList(product,productId){
+		// 	for(var i=0;i < self.products.length;i++){
+		// 		if(self.products[i].id == productId){
+		// 			self.products[i].name = product.name;
+		// 			self.products[i].image = product.image;
+		// 			self.products[i].description = product.description;
+		// 			self.products[i].category = product.category;
+		// 			self.products[i].price = product.price;
+		// 			self.products[i].quantity = product.quantity;
+		// 		}
+		// 	}
+		// }
 
-		function removeProduct(productId){
-			for(var i=0;i < self.products.length;i++){
-				if(self.products[i].id == productId){
-					delete self.products[i];
-				}
-			}
-		}
+		// function removeProduct(productId){
+		// 	for(var i=0;i < self.products.length;i++){
+		// 		if(self.products[i].id == productId){
+		// 			delete self.products[i];
+		// 		}
+		// 	}
+		// }
 	}
+
+		var PRODUCT_DATA = [{
+		"Name": "A",
+		"Type": "vowel",
+		"ANV": 001,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910004",
+		"tileID": "001",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 9
+	}, {
+		"Name": "B",
+		"Type": "consonant",
+		"ANV": 002,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=74929706",
+		"tileID": "002",
+		"tilePV": "003",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "C",
+		"Type": "consonant",
+		"ANV": 003,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=76745932",
+		"tileID": "003",
+		"tilePV": "003",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "D",
+		"Type": "consonant",
+		"ANV": 004,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910069",
+		"tileID": "004",
+		"tilePV": "002",
+		"Description": "",
+		"quantity": 4
+	}, {
+		"Name": "E",
+		"Type": "vowel",
+		"ANV": 005,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910182",
+		"tileID": "005",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 12
+	}, {
+		"Name": "F",
+		"Type": "consonant",
+		"ANV": 006,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=84770644",
+		"tileID": "006",
+		"tilePV": "004",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "G",
+		"Type": "consonant",
+		"ANV": 007,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=78442476",
+		"tileID": "007",
+		"tilePV": "002",
+		"Description": "",
+		"quantity": 3
+	}, {
+		"Name": "H",
+		"Type": "consonant",
+		"ANV": 008,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70733744",
+		"tileID": "008",
+		"tilePV": "004",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "I",
+		"Type": "vowel",
+		"ANV": 009,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636441",
+		"tileID": "009",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 9
+	}, {
+		"Name": "J",
+		"Type": "consonant",
+		"ANV": 010,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63909871",
+		"tileID": "010",
+		"tilePV": "008",
+		"Description": "",
+		"quantity": 1
+	}, {
+		"Name": "K",
+		"Type": "consonant",
+		"ANV": 011,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=87123099",
+		"tileID": "011",
+		"tilePV": "005",
+		"Description": "",
+		"quantity": 1
+	}, {
+		"Name": "L",
+		"Type": "vowel",
+		"ANV": 012,
+		"Language": "consonant",
+		"Image": "http://www.samski.co.uk/wp/wp-content/uploads/Letter.jpg",
+		"tileID": "012",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 4
+	}, {
+		"Name": "M",
+		"Type": "consonant",
+		"ANV": 013,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=73537103",
+		"tileID": "013",
+		"tilePV": "003",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "N",
+		"Type": "consonant",
+		"ANV": 014,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636045",
+		"tileID": "014",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 6
+	}, {
+		"Name": "O",
+		"Type": "vowel",
+		"ANV": 015,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70635972",
+		"tileID": "015",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 8
+	}, {
+		"Name": "P",
+		"Type": "consonant",
+		"ANV": 016,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=74929587",
+		"tileID": "016",
+		"tilePV": "003",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "Q",
+		"Type": "consonant",
+		"ANV": 017,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70901255",
+		"tileID": "017",
+		"tilePV": "010",
+		"Description": "",
+		"quantity": 1
+	}, {
+		"Name": "R",
+		"Type": "consonant",
+		"ANV": 018,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=78432134",
+		"tileID": "018",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 6
+	}, {
+		"Name": "S",
+		"Type": "consonant",
+		"ANV": 019,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636392",
+		"tileID": "019",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 4
+	}, {
+		"Name": "T",
+		"Type": "consonant",
+		"ANV": 020,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=66386907",
+		"tileID": "020",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 6
+	}, {
+		"Name": "U",
+		"Type": "vowel",
+		"ANV": 021,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636329",
+		"tileID": "021",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 4
+	}, {
+		"Name": "V",
+		"Type": "consonant",
+		"ANV": 022,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=88677393",
+		"tileID": "022",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "W",
+		"Type": "consonant",
+		"ANV": 023,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=71302964",
+		"tileID": "023",
+		"tilePV": "004",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "X",
+		"Type": "consonant",
+		"ANV": 024,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=86484912",
+		"tileID": "024",
+		"tilePV": "008",
+		"Description": "",
+		"quantity": 1
+	}, {
+		"Name": "Y",
+		"Type": "vowel || consonant",
+		"ANV": 025,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=65997176",
+		"tileID": "025",
+		"tilePV": "004",
+		"Description": "",
+		"quantity": 2
+	}, {
+		"Name": "Z",
+		"Type": "consonant",
+		"ANV": 026,
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=85623090",
+		"tileID": "026",
+		"tilePV": "010",
+		"Description": "",
+		"quantity": 1
+	},  {
+		"Name": "Blank",
+		"Type": "blank",
+		"ANV": 000,
+		"Language": "Any",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=75736351",
+		"tileID": "027",
+		"tilePV": "000",
+		"Description": "",
+		"quantity": 2
+	}, ]
+	
 })();
