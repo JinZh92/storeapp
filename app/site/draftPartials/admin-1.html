@@ -1,0 +1,197 @@
+
+
+
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+                <a class="navbar-brand" href="#">Shoppers</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a ng-click="ctrl.logout()">
+                    Logout
+                    
+                </a>
+            </li>
+             
+        </ul>
+        </div>
+</nav>
+
+
+
+ <div class="container-fluid top">
+
+ <h2>Administration Dashboard</h2>
+
+<!-- begin tabs -->
+<div id="content">
+    <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+        <li class="active"><a href="#orders" data-toggle="tab">Orders</a></li>
+        <li><a href="#products" data-toggle="tab">Products</a></li>
+        <li><a href="#addnew" data-toggle="tab">Add New</a></li>
+    </ul>
+    <div id="my-tab-content" class="tab-content">
+      <!-- begin page 1 / orders page -->
+        <div class="tab-pane active" id="orders">
+
+
+          
+            <h3>Orders</h3>
+            
+
+            	<body ng-app="shopApp" ng-controller="AdminCtrl as ctrl">
+  
+  <div class="container">
+ 
+    <ul class="list-group">
+      
+      
+
+     
+    
+      <li  class="list-group-item" ng-repeat="todo in ctrl.todos">
+
+
+        <label>
+          
+        </label>
+        <span ng-class="{'done': todo.done}"> {{todo.Order}}</span>
+       
+        <label>
+         <input ng-click="ctrl.disabled()"type="checkbox" ng-model="todo.done"></label>
+      </li>
+      
+    </ul>
+
+  
+    <select ng-model="ctrl.selected" ng-options="item.label for item in ctrl.filters">
+
+    </select>
+    
+   
+    <button class="pull-right btn btn-default" ng-click="ctrl.click()" ng-disabled="ctrl.isDisabled" >Clear Complete</button>
+
+  </div>
+
+
+
+
+
+
+
+
+        </div>
+        <!-- begin page 2 / Product list page -->
+        <div class="tab-pane" id="products">
+
+           
+            <h3>Products</h3>
+            <div ng-hide="ctrl.is_products">
+            <p>
+            You have no products
+            </p>
+        </div>
+
+        <div ng-show="ctrl.is_products">
+          <table class="products-list table">
+            <tr>
+              <th>Category</th>
+              <th>Name</th>
+              <th>Price</th>
+              <th>Quantity</th>
+              <th>&nbsp;</th>
+            </tr>
+            <tr ng-repeat="product in ctrl.products">
+              <td>{{product.category}}</td>
+              <td>{{product.name}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.quantity}}</td>
+              <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+            </tr>
+          </table>
+        </div>
+        </div>
+
+
+
+
+
+
+
+<!-- begin page 3 / Add new Product list page -->
+
+        <div class="tab-pane" id="addnew">
+
+           
+            <h3>Add New Product</h3>
+
+
+            <form name="add-product" ng-submit"ctrl.addProduct()">
+ <fieldset class="form-group">
+    <label>Product Name</label>
+    <input type="text" class="form-control" placeholder="Insert Product Name" ng-model="ctrl.name" required>
+  </fieldset>
+
+   <fieldset class="form-group">
+    <label>Product Image URL</label>
+    <input type="text" class="form-control" placeholder="Insert URL" ng-model="ctrl.image" required>
+  </fieldset>
+
+
+   <fieldset class="form-group">
+    <label>Product Description</label>
+    <textarea class="form-control" rows="3" placeholder="Insert Product Description" ng-model="ctrl.description" required></textarea>
+  </fieldset>
+
+   <fieldset class="form-group">
+    <label>Product ID</label>
+    <input type="text" class="form-control" placeholder="Insert Product ID" ng-model="" required>
+  </fieldset>
+
+
+
+  <fieldset class="form-group">
+    <label>Category</label>
+    <select class="form-control" ng-model="ctrl.category" required>
+      <option>Category 1</option>
+      <option>Category 2</option>
+      <option>Category 3</option>
+      <option>Category 4</option>
+      <option>Category 5</option>
+      <option>Category 6</option>
+      <option>Category 7</option>
+      <option>Category 8</option>
+      <option>Category 9</option>
+      <option>Category 10</option>
+     
+     
+
+    </select>
+
+  </fieldset>
+  
+   <fieldset class="form-group">
+    <label>Price</label>
+    <input type="text" class="form-control" placeholder="Insert Price" ng-model="ctrl.price">
+  </fieldset>
+
+   <fieldset class="form-group">
+    <label>Inventory Amount</label>
+    <input type="text" class="form-control" placeholder="Insert Inventory Amount" ng-model="ctrl.quantity" required>
+  </fieldset>
+ 
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- end tabs -->
