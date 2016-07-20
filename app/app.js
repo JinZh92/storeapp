@@ -71,9 +71,9 @@
 				controller:'ProductCtrl as ctrl',
 			})
 
-			.state('review-purchase',{
-				url:'/review-purchase',
-				templateUrl:'site/draftPartials/review-purchase.html',
+			.state('checkout',{
+				url:'/checkout',
+				templateUrl:'site/draftPartials/checkout.html',
 				controller:'AuthCtrl as ctrl',
 			});
 

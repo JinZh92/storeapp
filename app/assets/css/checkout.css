@@ -1,0 +1,91 @@
+.navbar {
+	padding-top: 20px;
+}
+
+.navbar-header{
+	padding-left: 190px;
+}
+
+.navbar {
+
+}
+
+.left {
+	height: 500px;
+	width: 630px;
+	float: left;
+	background-color: #EEE8AA;
+	position: relative;
+	margin-top: 85px;
+	margin-left: 20px;
+}
+
+.well {
+	width: 550px;
+	height: 350px;
+	top: 20px;
+	margin-left: 10px;
+	position: absolute;
+}
+
+.text-left {
+	bottom: 50px;
+	position: absolute;
+	padding-left: 230px;
+}
+
+.right {
+	height: 500px;
+	width: 600px;
+	float: right;
+	position: relative;
+	background-color: #F5F5DC;
+	margin-top: 85px;
+	margin-right: 20px;
+}
+
+.items {
+	height: 470px;
+	width: 600px;
+	position: absolute;
+	background-color: #F5F5DC;
+	margin-left: 15px;
+	margin-top: 15px;
+}
+
+.info {
+	bottom: 100px;
+	float: left;
+	position: absolute;
+	padding-left: 30px;
+	padding-top: 15px;
+	width: 500px;
+}
+.button {
+	bottom: 25px;
+	padding-left: 250px;
+	position: absolute;
+}
+
+.save {
+	bottom: 70px;
+	padding-left: 50px;
+	position: absolute;
+}
+
+.name1 {
+	float: left;
+	padding-left: 30px;
+	padding-top: 100px;
+	position: absolute;
+	width: 160px;
+}
+
+.name2 {
+	float: left;
+	padding-left: 200px;
+	padding-top: 100px;
+	position: absolute;
+	width:400px;
+
+}

@@ -1,0 +1,124 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="http://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+	<title>Order Confirmation </title>
+</head>
+<body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+<nav class="navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+                <a class="navbar-brand" href="#">Shoppers</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="#">
+                    Cart
+                    <span class="label label-default label-pill pull-xs-right">2
+                    </span>
+                </a>
+            </li>
+             <li class="active"><a href="#">All Products</a></li>     
+              <li><a href="#">Search</a></li>
+              <li><a ng-click="ctrl.unhide()" href="#">Menu</a></li>  
+        </ul>
+        </div>
+</nav>
+
+
+
+ <div class="container-fluid top">
+
+
+
+      <div class="row">
+   <div class="col-md-12 col-sm-12 col-xs-12">
+      <h2>Order Confirmation</h2>
+
+
+  </div>
+
+
+    <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12">
+      <h3>Purchases</h3>
+      <div>
+        <p>Order Confirmation Number: {{}}</p>
+
+
+      </div>
+      <div>
+
+      <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Product Image</th>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{image}}</td>
+        <td>{{product title}}</td>
+        <td>{{description}}</td>
+        <td>{{price}}</td>
+      </tr>
+      
+    </tbody>
+  </table>
+
+<div class="row text-right">
+  <div class="col-xs-2 col-xs-offset-8">
+    <p>
+      <strong>
+        
+        Total : <br>
+      </strong>
+    </p>
+  </div>
+  <div class="col-xs-2">
+    <strong>
+     
+      $1200.00 <br>
+    </strong>
+  </div>
+
+
+
+</div>
+
+    </div></div>
+    <div class="col-md-6 col-sm-6 col-xs-12">
+      <h3>We're shipping to</h3>
+    </div>
+  </div>
+
+
+
+
+</div>
+
+  <button>Keep Shopping</button>
+
+
+
+
+
+
+<script src="app.js"></script>
+<script   src="https://code.jquery.com/jquery-1.12.4.min.js"   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="   crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+<script src="http://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+</div>
+</body>
+</html>
