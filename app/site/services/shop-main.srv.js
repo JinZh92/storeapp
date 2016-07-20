@@ -23,7 +23,10 @@
 		self.rightImage = [
 		'assets/img/right-1.jpg',
 		'assets/img/right-2.jpg',
-		'assets/img/right-3.jpg'
+		'assets/img/right-3.jpg',
+		'assets/img/right-5.jpg',
+		'assets/img/right-4.jpg',
+		'assets/img/right-6.jpg'
 		]
 	}
 

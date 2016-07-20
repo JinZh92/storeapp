@@ -15,6 +15,7 @@ function ShopMainController($scope,$state, shopMainSrv, $window, $timeout){
 
 	ctrl.leftHeader = shopMainSrv.leftContent[0].header;
 	ctrl.leftBody = shopMainSrv.leftContent[0].body;
+	ctrl.openCart = openCart;
 
 
 	angular.element($window).bind("scroll", function($scope) {
@@ -41,6 +42,9 @@ function ShopMainController($scope,$state, shopMainSrv, $window, $timeout){
 	}
 	function gotoproducts(){
 		$state.go('product');
+	}
+	function openCart(){
+		
 	}
 }
 
