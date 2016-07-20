@@ -1,3 +1,86 @@
-<div>
-	
+<nav class="navbar navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+				<a class="navbar-brand" href="#">Shoppers</a>
+		</div>
+		<ul class="nav navbar-nav">
+			<li>
+				<a href="#">
+					Cart
+					<span class="label label-default label-pill pull-xs-right">2
+					</span>
+				</a>
+			</li>
+	     	<li class="active"><a href="#">All Products</a></li>	 
+	      	<li><a href="#">Search</a></li>
+	      	<li><a ng-click="ctrl.unhide()" href="#">Menu</a></li>  
+		</ul>
+		</div>
+</nav>
+
+<div class="right-half">
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 1</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 2</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 3</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 4</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 5</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 6</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 7</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 8</div>
+	</div>
+	<div class="right-image">
+		<div class="right-image-text">I'm Pikachu 9</div>
+	</div>
+
+	<div class="right-image right-image-last">
+		<div class="right-viewall"><h2>View All</h2></div>
+	</div>
+</div>	
+
+<div class="left-fixed">
+	<div class="left-content">
+		<div class="left-header">
+			<h1 id="left-header">{{ctrl.leftHeader}}</h1>
+		</div>
+		
+		<div class="left-line"></div>
+		<div class="left-body">
+			<p id="left-body">{{ctrl.leftBody}}</p>
+			<div class="left-links"></div>
+		</div>
+
+		<div class="left-links">
+			<a href="#">All goods</a>
+			<a href="#">Read more</a>
+		</div>
+		
+	</div>
+</div>
+
+<div ng-class="{unhidden: ctrl.showHidden}" class="hidden-panel">
+	<div class="hidden-container">
+		<div ng-click="ctrl.hide()" class="hidden-close"><a href="#">close</a></div>
+		<div class="hidden-menu">
+			<ul class="list-group">
+				<li class="list-group-item"><a href="#">About</a></li>
+				<li class="list-group-item"><a href="#">Contact</a></li>
+				<li class="list-group-item"><a href="#">Admin Login</a></li>
+			</ul>
+		</div>
+	</div>
 </div>

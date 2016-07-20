@@ -11,16 +11,16 @@
 			$urlRouterProvider.otherwise('/');
 
 			$stateProvider
+			// -----------Linking the shop main page -------------//
 			.state('shop',{
 				url:'/',
 				templateUrl:'site/draftPartials/shop-main.html',
-				controller:'ShopCtrl as ctrl',
-				//TODO #3 resolve products before main page load
-				resolve:{
-					products:function(productSrv){
-						return productSrv.getProducts();
-					}
-				}
+				controller:'ShopMainController as ctrl'
+				// resolve:{
+				// 	products:function(productSrv){
+				// 		return productSrv.getProducts();
+				// 	}
+				// }
 			})
 
 			.state('admin',{
