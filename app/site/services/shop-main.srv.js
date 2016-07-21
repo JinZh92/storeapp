@@ -8,16 +8,16 @@
 		var self = this;
 
 		self.leftContent = [{
-			header: 'Hello World!',
-			body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+			header: 'Hand Crafted',
+			body: 'Our fresh materials  travel to Toronto, where we remove all the excess moisture from the freshly cut wood. Our local suppliers kiln-dry and season each individual piece to ensure the highest protection and durability. Once there, skilled local artisans deploy their talent and creative fiber to work the wood into the stunning final products you see in our stores.'
 		}, 
 		{
-			header: 'Pikachu',
-			body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+			header: 'Made with Love',
+			body: 'It is a delight to convey our unwavering love of wood.The last critical step of the journey is where the beautifully grained wood is warmed with Scrabblr’s uniquely blended lacquer finish at our in-house facility. Only then is the Scrabblr piece ready to meet with its new owner.'
 		}, 
 		{
-			header: 'Drowzee!!',
-			body: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+			header: 'Stackable',
+			body: 'Get one or a whole bunch. Make your home an escape, a retreat and a refuge, but also a portal into an inner world – a place for inspiration and renewal. Scrabblr loves to create it by conjuring the right ambiance that gives one a place to shine and unwind.'
 		}];
 
 		self.rightImage = [
