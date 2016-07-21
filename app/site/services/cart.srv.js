@@ -7,7 +7,34 @@
 	function cart() {
 		var self = this;
 
-		self.cartContent = [];
+		self.cartContent = [
+		{productObj: {
+		"Name": "I",
+		"Consonant": false,
+		"Type": "vowel",
+		"color": "tan",
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636441",
+		"tileID": "009",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 9,
+		"price": 3.00
+		}, quantity: 1},
+		{productObj: {
+		"Name": "E",
+		"Consonant": false,
+		"Type": "vowel",
+		"color": "tan",
+		"Language": "English",
+		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910182",
+		"tileID": "005",
+		"tilePV": "001",
+		"Description": "",
+		"quantity": 12,
+		"price": 3.00
+		}, quantity: 2} 
+		];
 		self.addtocart = addtocart;
 		self.getNumAdded = getNumAdded;
 		self.clearCart = clearCart;
@@ -34,6 +61,14 @@
 		function deleteFromCart(product){
 			if (self.cartContent.indexof(product) != (-1)){
 				self.cartContent.splice(self.cartContent.indexof(product), 1);
+			}
+		}
+		function getTotalPrice(){
+			if (cartContent.length == 0){
+				return 0;
+			}
+			for (var i = 0; i < cartContent.length; i++){
+
 			}
 		}
 	}
