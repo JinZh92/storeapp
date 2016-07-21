@@ -29,7 +29,12 @@
 			.state('shop.product',{
 				url:'productlist',
 				templateUrl:'site/draftPartials/product-list.html',
-				controller:'ProductCtrl as ctrl',
+				controller:'ProductCtrl as ctrl'
+			})
+			.state('shop.reviewpurchase',{
+				url:'reviewpurchase',
+				templateUrl:'site/draftPartials/review-purchase.html',
+				controller:''
 			})
 
 			.state('auth',{

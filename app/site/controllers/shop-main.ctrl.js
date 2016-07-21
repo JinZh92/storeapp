@@ -18,6 +18,7 @@ function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 	ctrl.leftHeader = shopMainSrv.leftContent[0].header;
 	ctrl.leftBody = shopMainSrv.leftContent[0].body;
 	ctrl.addtocart = addtocart;
+	ctrl.gohome = gohome;
 
 	function unhide(){
 		ctrl.showHidden = true;
@@ -42,6 +43,9 @@ function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 		});
 	}
 	
+	function gohome(){
+		$state.go('/');
+	}
 	function gotoproducts(){
 		$state.go('shop.product');
 	}
