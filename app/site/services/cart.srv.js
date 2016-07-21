@@ -69,7 +69,7 @@
 				return 0;
 			} else{
 				for (var i = 0; i < cartContent.length; i++){
-					totalprice = totalprice + cartContent[i].productObj.price;
+					totalprice = totalprice + (cartContent[i].productObj.price * cartContent[i].quantity);
 				}
 				return totalprice;
 			}

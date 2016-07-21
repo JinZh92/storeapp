@@ -4,7 +4,7 @@ angular
 	.module('shopApp')
 	.controller('ShopMainController', ShopMainController);
 
-function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
+function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	var ctrl = this;
 
 	$state.go('shop.body');
@@ -27,7 +27,7 @@ function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 	function hide(){
 		ctrl.showHidden = false;
 	}	
-
+	//-------------scrolling function------------// 
 	angular.element($window).bind("scroll", function($scope) {
         if (this.pageYOffset >= 1200) {
 			scroll(1);
@@ -44,6 +44,7 @@ function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 		});
 	}
 	
+	// ------------linking between pages----------//
 	function gohome(){
 		$state.go('shop.body');
 	}
@@ -56,6 +57,17 @@ function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 	function login(){
 		$state.go('auth');
 	}
+
+	// ---------------cart function---------------//
+	ctrl.cartContent = cartSrv.cartContent;
+	ctrl.gettotalprice = gettotalprice;
+	$scope.$watch(
+		function(){
+			return cartSrv.cartContent;
+		}, function(newVal){
+			ctrl.cartContent = cartSrv.cartContent;
+		}
+	)
 	function addtocart(product){
 		cartSrv.addtocart(product);
 	}

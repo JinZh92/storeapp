@@ -38,22 +38,22 @@
 	<div class="cart-inner">
 		<div class="cart-list">
 			<ul class="list-group">
-				<li class="list-group-item">
-					<div class="cart-item">Cart Item 1</div>
+				<li ng-repeat="x in ctrl.cartContent" class="list-group-item">
+					<div class="cart-item">Scrabbler Letter {{x.productObj.Name}}</div>
 					<p>
-						<span>Quantity: 1</span> 
-						<span>Price: $10</span>
+						<span>Quantity: {{x.quantity}}<span> 
+						<span>Price: ${{x.productObj.price}}</span>
 					</p>
 					<div class="item-delete"></div>
 				</li>
-				<li class="list-group-item">
+				<!-- <li class="list-group-item">
 					<div class="cart-item">Cart Item 2</div>
 					<p>
 						<span>Quantity: 2</span> 
 						<span>Price: $20</span>
 					</p>
 					<div class="item-delete"></div>
-				</li>
+				</li> -->
 			</ul>
 		</div>
 		<div class="cart-text">
