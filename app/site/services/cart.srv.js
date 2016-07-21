@@ -14,12 +14,16 @@
 		self.deleteFromCart = deleteFromCart;
 
 		function addtocart(product){
+			var found = false;
 			for (var i = 0; i < cartContent.length; i++){
-				if (){
-					
+				if (cartContent[i].productObj == product){
+					cartContent[i].quantity ++;
+					found = true;
 				}
 			}
-			self.cartContent.push({productObj: product, quantity: quantity});
+			if (found == false){
+				self.cartContent.push({productObj: product, quantity: 1});
+			}
 		}
 		function getNumAdded(){
 			return self.cartContent.length;
