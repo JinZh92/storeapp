@@ -67,9 +67,11 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 		function(){
 			return cartSrv.cartContent;
 		}, function(newVal){
+			console.log('detecting change')
 			ctrl.cartContent = cartSrv.cartContent;
 			ctrl.totalprice = cartSrv.getTotalPrice();
 		}
+		,true
 	)
 	function addtocart(product){
 		cartSrv.addtocart(product);
