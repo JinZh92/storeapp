@@ -89,9 +89,10 @@
 			self.cartContent = [];
 		}
 		function deleteFromCart(product){
-			if (self.cartContent.indexof(product) != (-1)){
-				self.cartContent.splice(self.cartContent.indexof(product), 1);
+			if (self.cartContent.indexOf(product) != (-1)){
+				self.cartContent.splice(self.cartContent.indexOf(product), 1);
 			}
+			console.log(self.cartContent);
 		}
 		function getTotalPrice(){
 			var totalprice = 0;

@@ -24,6 +24,21 @@ body {
 	background-color: transparent !important;
 /*	cursor: default;*/
 }
+.navbar-header{
+	font-size: 25px;
+}
+.mainlogo{
+	height: 50px;
+	position: absolute;
+	left: 4vw;
+}
+.label-color{
+	background-color: #4CAF50;
+}
+.label-newsize{
+	font-size: 100%;
+	padding:0.5em .7em .4em;
+}
 /*-------index page right half-------*/
 .right-half, .hidden-panel{
 	position: absolute;
@@ -67,8 +82,12 @@ body {
 	top:0px;
 	left: 0px;
 }
+.left-header h1{
+	font-size: 40px;
+	margin-top: 50px;
+}
 .left-line{
-	margin: 20px 0px;
+	margin: 40px 0px;
 	height:3px;
 	width: 100px;
 	background-color: black;
@@ -79,6 +98,10 @@ body {
 .left-links a{
 	margin-top: 10%;
 	margin-left: 10%;
+}
+#left-body{
+	line-height: 27px;
+	font-size: 17px;
 }
 /*-------index page hidden menu-------*/
 .hidden-panel{

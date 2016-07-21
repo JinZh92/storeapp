@@ -2,13 +2,14 @@
 <nav class="navbar navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
-				<a ng-click="ctrl.gohome()" class="navbar-brand" href="">Scrabblrs</a>
+			<img ng-click="ctrl.gohome()" class="mainlogo" src="assets/img/logo.png">
+			<!-- <a ng-click="ctrl.gohome()" class="navbar-brand" href="">Scrabblrs</a> -->
 		</div>
 		<ul class="nav navbar-nav">
-			<li>
+			<li ng-show="ctrl.cartContent.length != 0">
 				<a ng-click="showCart = !showCart" href="">
 					Cart
-					<span class="label label-default label-pill pull-xs-right">2
+					<span class="label label-color label-pill pull-xs-right label-newsize">{{ctrl.cartContent.length}}
 					</span>
 				</a>
 			</li>
@@ -34,7 +35,7 @@
 </div>
 
 <!-- cart pop out -->
-<div ng-show="showCart" class="cart-container">
+<div ng-show="(showCart) && (ctrl.cartContent.length != 0)" class="cart-container">
 	<div class="cart-inner">
 		<div class="cart-list">
 			<ul class="list-group">
@@ -44,7 +45,7 @@
 						<span>Quantity: {{x.quantity}}<span> 
 						<span>Price: ${{x.productObj.price}}</span>
 					</p>
-					<div ng-click="ctrl.deletefromcart(x.productObj)" class="item-delete"></div>
+					<div ng-click="ctrl.deletefromcart(x)" class="item-delete"></div>
 				</li>
 			</ul>
 		</div>
