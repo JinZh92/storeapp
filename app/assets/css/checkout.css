@@ -1,7 +1,7 @@
 
 .left {
 	height: 500px;
-	width: 630px;
+	width: 47.5vw;
 	float: left;
 	background-color: #EEE8AA;
 	position: relative;
@@ -10,7 +10,7 @@
 }
 
 .well {
-	width: 550px;
+	width: 41vw;
 	height: 350px;
 	top: 20px;
 	margin-left: 10px;
@@ -25,7 +25,7 @@
 
 .right {
 	height: 500px;
-	width: 600px;
+	width: 47vw;
 	float: right;
 	position: relative;
 	background-color: #F5F5DC;
@@ -35,7 +35,7 @@
 
 .items {
 	height: 470px;
-	width: 600px;
+	width: 45vw;
 	position: absolute;
 	background-color: #F5F5DC;
 	margin-left: 15px;
