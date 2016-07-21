@@ -27,8 +27,9 @@
 
  <h2>Administration Dashboard</h2>
 
-
- <form name="outerForm" class="tab-form-demo">
+<!-- new -->
+<!--   Tabs using nested forms:
+  <form name="outerForm" class="tab-form-demo">
     <uib-tabset active="activeForm">
       <uib-tab index="0" heading="Form Tab">
         <ng-form name="nestedForm">
@@ -45,30 +46,28 @@
         More Tab Content
       </uib-tab>
     </uib-tabset>
-  </form>
-
-
-
+  </form> -->
+<!-- new -->
 
  
 
 <!-- begin tabs -->
 <div id="content">
     <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
-        <li class="active"><a href="#orders" data-toggle="tab">Orders</a></li>
-        <li><a href="#products" data-toggle="tab">Products</a></li>
-        <li><a href="#addnew" data-toggle="tab">Add New</a></li>
+        <li><a ng-click="ctrl.currentTab='orders'" data-toggle="tab">Orders</a></li>
+        <li><a ng-click="ctrl.currentTab='products'" data-toggle="tab">Products</a></li>
+        <li><a ng-click="ctrl.currentTab='addnew'"  data-toggle="tab">Add New</a></li>
     </ul>
     <div id="my-tab-content" class="tab-content">
       <!-- begin page 1 / orders page -->
-        <div class="tab-pane active" id="orders">
+        <div class="tab-pane active" id="orders" ng-show="ctrl.currentTab==='orders'">
 
 
           
             <h3>Orders</h3>
             
 
-            	<body ng-app="shopApp" ng-controller="AdminCtrl as ctrl">
+            	
   
   <div class="container">
  
@@ -111,7 +110,7 @@
 
         </div>
         <!-- begin page 2 / Product list page -->
-        <div class="tab-pane" id="products">
+        <div class="tab-pane active" id="products" ng-show="ctrl.currentTab==='products'">
 
            
             <h3>Products</h3>
@@ -149,7 +148,7 @@
 
 <!-- begin page 3 / Add new Product list page -->
 
-        <div class="tab-pane" id="addnew">
+        <div class="tab-pane active" id="addnew" ng-show="ctrl.currentTab==='addnew'">
 
            
             <h3>Add New Product</h3>
@@ -171,11 +170,11 @@
     <label>Product Description</label>
     <textarea class="form-control" rows="3" placeholder="Insert Product Description" ng-model="ctrl.description" required></textarea>
   </fieldset>
-
+<!-- 
    <fieldset class="form-group">
     <label>Product ID</label>
     <input type="text" class="form-control" placeholder="Insert Product ID" ng-model="" required>
-  </fieldset>
+  </fieldset> -->
 
 
 

@@ -16,14 +16,19 @@
 
     function AdminCtrl($scope,$state,productSrv, $location) {
         var adminVm = this;
-
+        adminVm.active = 0;
         adminVm.todoIndex=0;
+        adminVm.currentTab = 'orders';
         
         adminVm.todos = [
             {Order: 'Order ID 1', done: false},
             {Order: 'Order ID 2', done: false},
             {Order: 'Order ID 3', done: true}
  ];
+
+
+
+
 
 
         adminVm.productSrv = productSrv;
