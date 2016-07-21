@@ -21,8 +21,8 @@
 
   </form>
 
-  <body class="row">
-    <div>
+  <body>
+    <div class="row">
       <div 
         ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
         ng-show="ctrl.selector.showProducts(product)"
