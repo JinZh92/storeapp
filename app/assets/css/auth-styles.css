@@ -1,17 +1,13 @@
 /* Login Page - blue header with BrainStation logo */
 
-
-html { 
+.login-page { 
   background: url(https://s32.postimg.org/t3nj9y639/Slack_for_i_OS_Upload.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  height: 100vh;
 }
-
-
-
-
 .login-page > .navbar {
   background-color: #2b96ff;
   margin: 0;

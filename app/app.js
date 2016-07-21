@@ -32,6 +32,12 @@
 				controller:'ProductCtrl as ctrl',
 			})
 
+			.state('auth',{
+				url:'/auth',
+				templateUrl:'site/draftPartials/auth-main-1.html',
+				controller:'AuthCtrl as ctrl',
+			})
+
 			.state('admin',{
 				url:'/admin',
 				templateUrl:'site/draftPartials/admin.html',
@@ -62,19 +68,13 @@
 				templateUrl:'site/draftPartials/admin-edit-product.html',
 			})
 
-			.state('auth',{
-				url:'/auth',
-				templateUrl:'site/draftPartials/auth-main.html',
-				controller:'AuthCtrl as ctrl',
-			})
+			
 
 			.state('order-confirm',{
 				url:'/order-confirm',
 				templateUrl:'site/draftPartials/order-confirm.html',
 				controller:'AuthCtrl as ctrl',
 			})
-
-		
 
 			.state('checkout',{
 				url:'/checkout',

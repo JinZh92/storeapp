@@ -154,8 +154,9 @@ body {
     font-size: 14px;
 }
 .cart-minitext{
+	font-size: 13px;
 	margin-top: 10px;
-	margin-left: 150px; 
+	margin-left: 155px; 
 	margin-bottom: 5px;
 }
 .cart-item{
