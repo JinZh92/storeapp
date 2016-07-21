@@ -42,7 +42,7 @@ function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 	}
 	
 	function gotoproducts(){
-		$state.go('product');
+		$state.go('shop.product');
 	}
 	function addtocart(product){
 		cartSrv.addtocart(product);

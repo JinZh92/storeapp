@@ -22,9 +22,14 @@
 				// }
 			})
 			.state('shop.body',{
-				url:'shopbody',
+				url:'shop',
 				templateUrl:'site/draftPartials/shop-main-body.html',
 				controller:'ShopMainController as ctrl'
+			})
+			.state('shop.product',{
+				url:'productlist',
+				templateUrl:'site/draftPartials/product-list.html',
+				controller:'ProductCtrl as ctrl',
 			})
 
 			.state('admin',{
@@ -69,11 +74,7 @@
 				controller:'AuthCtrl as ctrl',
 			})
 
-			.state('product',{
-				url:'/product-list',
-				templateUrl:'site/draftPartials/product-list.html',
-				controller:'ProductCtrl as ctrl',
-			})
+		
 
 			.state('checkout',{
 				url:'/checkout',

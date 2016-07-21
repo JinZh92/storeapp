@@ -1,7 +1,7 @@
 <div id="productList">
   <h1 class="text-center">Current Inventory</h1>
 
-  <a class="btn btn-primary" href="/#/">Back to Shop Home</a>
+<!--   <a class="btn btn-primary" href="/#/">Back to Shop Home</a> -->
 
   <form class="form-inline">
     <div class="form-group">
@@ -11,35 +11,27 @@
     <div class="form-group">
       <label for="search">Sort</label>
 
-      <select class="form-control" ng-options="option as option.label for option in ctrl.sortOptions" ng-model="ctrl.selectedOption"></select>
+      <select class="form-control" ng-options="x as x.label for x in ctrl.sortOptions" ng-model="ctrl.selectedOption"></select>
     </div>
-  </form>
+    <div class="form-group">
+      <label for="search">Showing</label>
+      
+      <select class="form-control" ng-options="x as x.label for x in ctrl.showFilters" ng-model="ctrl.selector"></select>
+    </div>
 
-<!--   <div class="media product-list-item" ng-repeat="product in ctrl.product">
-    <div class="media-left">
-      <div class="image-container">
-        <img class="media-object" src="{{product.Image}}">
-      </div>
-    </div>
-  </div> -->
-  
-<!--   <body class="row">
-    <div 
-      ng-repeat="product in ctrl.product | filter : ctrl.search | orderBy : ctrl.selectedOption.sortField"
-      ng-click="ctrl.popUp()">
-      <div class="col-md-3 col-sm-6">
-        <img class="img-responsive" src="{{product.Image}}">
-      </div>
-    </div>
-  </body> -->
+  </form>
 
   <body class="row">
     <div>
-      <div ng-repeat="product in ctrl.product | filter : ctrl.search | orderBy : ctrl.selectedOption.sortField"
-      ng-click="ctrl.popUp()" class="col-md-3 col-sm-6">
+      <div 
+        ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
+        ng-show="ctrl.selector.showProducts(product)"
+        class="col-md-3 col-sm-6"
+        ng-click="ctrl.popUp()">
         <img src="{{product.Image}}">
       </div>
     </div>
+
   </body>
 
 </div>

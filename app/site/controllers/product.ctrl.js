@@ -19,11 +19,15 @@
 		productVm.selectedOption = productVm.sortOptions[0];
 
 		// for product filter 
-		// productVm.sortOptions = [
-		// 	{label:'Vowels', sortField:'vowel'},
-		// 	{label:'Consonants', sortField:'consonant'},
-		// 	{label:'Sets',value:'set'},
-		// ];
+		productVm.showFilters = [
+			{label: 'All', showProducts: function(product) {return true;}},
+			{label: 'Vowels', showProducts: function(product) {return product.Type === "vowel"}},
+			{label: 'Consonants', showProducts: function(product) {return product.Type === "consonant"}},
+			{label: 'Tan', showProducts: function(product) {return product.color === "tan"}},
+			// {label: 'Black', showProducts: function(product) {return product.color === "black"}}
+		]
+		productVm.selector = productVm.showFilters[0];
+		// productVm.selector = "All";
 
 		productVm.popUp = popUp;
 
