@@ -4,7 +4,7 @@ angular
 	.module('shopApp')
 	.controller('ShopMainController', ShopMainController);
 
-function ShopMainController($scope,$state,shopMainSrv,cartSrv,$window,$timeout){
+function ShopMainController($scope,$state,shopMainSrv,$window,$timeout){
 	var ctrl = this;
 
 	$state.go('shop.body');
