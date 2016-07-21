@@ -3,11 +3,11 @@
 
 
 
-
 <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
-        <div class="navbar-header">
-                <a class="navbar-brand" href="#">Shoppers</a>
+        
+<div class="navbar-header">
+            <img ng-click="ctrl.gohome()" class="mainlogo" src="assets/img/logo.png">
         </div>
         <ul class="nav navbar-nav">
             <li>
@@ -123,18 +123,21 @@
         <div ng-show="ctrl.is_products">
           <table class="products-list table">
             <tr>
-              <th>Category</th>
+              <th>Image</th>
               <th>Name</th>
-              <th>Price</th>
+              <th>Category</th>
+               <th>Price</th>
               <th>Quantity</th>
-              <th>&nbsp;</th>
+              <th>Edit</th>
             </tr>
             <tr ng-repeat="product in ctrl.products">
-              <td>{{product.category}}</td>
-              <td>{{product.name}}</td>
-              <td>{{product.price}}</td>
+              <td><img src="{{product.Image}}" width="50px"></td>
+              <td>{{product.Name}}</td>
+              <td>{{product.Type}}</td>
+              
+              <td>${{product.price}}.00</td>
               <td>{{product.quantity}}</td>
-              <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+              <td><a ng-click="ctrl.editProduct(product)"><span class="glyphicon glyphicon-pencil"></span></a></td>
             </tr>
           </table>
         </div>
