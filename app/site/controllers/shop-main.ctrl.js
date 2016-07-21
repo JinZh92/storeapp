@@ -60,7 +60,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 
 	// ---------------cart function---------------//
 	ctrl.cartContent = cartSrv.cartContent;
-	ctrl.gettotalprice = gettotalprice;
+	// ctrl.gettotalprice = gettotalprice;
 	$scope.$watch(
 		function(){
 			return cartSrv.cartContent;
@@ -71,6 +71,9 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	function addtocart(product){
 		cartSrv.addtocart(product);
 	}
+	// function gettotalprice(){
+		
+	// }
 
 }
 
