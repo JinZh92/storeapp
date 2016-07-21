@@ -3,7 +3,6 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<img ng-click="ctrl.gohome()" class="mainlogo" src="assets/img/logo.png">
-			<!-- <a ng-click="ctrl.gohome()" class="navbar-brand" href="">Scrabblrs</a> -->
 		</div>
 		<ul class="nav navbar-nav">
 			<li ng-show="ctrl.cartContent.length != 0">
@@ -22,10 +21,10 @@
 <!-- Menu side bar -->
 <div ng-class="{unhidden: ctrl.showHidden}" class="hidden-panel">
 	<div class="hidden-container">
-		<div ng-click="ctrl.hide()" class="hidden-close"><a href="">close</a></div>
+		<div ng-click="ctrl.hide()" class="hidden-close"><a href=""><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a></div>
 		<div class="hidden-menu">
 			<ul class="list-group">
-				<li ng-click="ctrl.gohome()" class="list-group-item"><a href="">Home</a></li>
+				<li ng-click="ctrl.gohome()" class="list-group-item"><a href="">House</a></li>
 				<li class="list-group-item"><a href="">About</a></li>
 				<li class="list-group-item"><a href="">Contact</a></li>
 				<li ng-click="ctrl.login()" class="list-group-item"><a href="">Admin Login</a></li>
