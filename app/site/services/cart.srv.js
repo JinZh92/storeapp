@@ -7,6 +7,35 @@
 	function cart() {
 		var self = this;
 
+		// self.cartContent = [
+		// {productObj: {
+		// "Name": "I",
+		// "Consonant": false,
+		// "Type": "vowel",
+		// "color": "tan",
+		// "Language": "English",
+		// "Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636441",
+		// "tileID": "009",
+		// "tilePV": "001",
+		// "Description": "",
+		// "quantity": 9,
+		// "price": 3.00
+		// }, quantity: 1},
+		// {productObj: {
+		// "Name": "E",
+		// "Consonant": false,
+		// "Type": "vowel",
+		// "color": "tan",
+		// "Language": "English",
+		// "Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910182",
+		// "tileID": "005",
+		// "tilePV": "001",
+		// "Description": "",
+		// "quantity": 12,
+		// "price": 3.00
+		// }, quantity: 2} 
+		// ];
+
 		self.cartContent = [
 		{productObj: {
 		"Name": "I",

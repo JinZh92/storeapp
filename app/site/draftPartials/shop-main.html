@@ -39,18 +39,18 @@
 		<div class="cart-list">
 			<ul class="list-group">
 				<li ng-repeat="x in ctrl.cartContent" class="list-group-item">
-					<div class="cart-item">Scrabbler Letter {{x.productObj.Name}}</div>
+					<div class="cart-item">Scrabbler Letter "{{x.productObj.Name}}"</div>
 					<p>
 						<span>Quantity: {{x.quantity}}<span> 
 						<span>Price: ${{x.productObj.price}}</span>
 					</p>
-					<div class="item-delete"></div>
+					<div ng-click="ctrl.deletefromcart(x.productObj)" class="item-delete"></div>
 				</li>
 			</ul>
 		</div>
 		<div class="cart-text">
 			<div class="cart-price">
-				Total: ${{ctrl.totalprice}}
+				Total: $ {{ctrl.totalprice}}
 			</div>
 			<div class="cart-button">
 				<button ng-click="ctrl.reviewpurchase()">CHECKOUT NOW</button>

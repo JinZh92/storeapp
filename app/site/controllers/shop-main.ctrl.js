@@ -74,8 +74,8 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	function addtocart(product){
 		cartSrv.addtocart(product);
 	}
-	function deletefromcart(){
-		
+	function deletefromcart(product){
+		cartSrv.deleteFromCart(product);
 	}
 
 }
