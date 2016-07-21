@@ -39,6 +39,7 @@
 		self.getNumAdded = getNumAdded;
 		self.clearCart = clearCart;
 		self.deleteFromCart = deleteFromCart;
+		self.getTotalPrice = getTotalPrice;
 
 		function addtocart(product){
 			var found = false;
@@ -65,11 +66,11 @@
 		}
 		function getTotalPrice(){
 			var totalprice = 0;
-			if (cartContent.length == 0){
+			if (self.cartContent.length == 0){
 				return 0;
 			} else{
-				for (var i = 0; i < cartContent.length; i++){
-					totalprice = totalprice + (cartContent[i].productObj.price * cartContent[i].quantity);
+				for (var i = 0; i < self.cartContent.length; i++){
+					totalprice = totalprice + (self.cartContent[i].productObj.price * self.cartContent[i].quantity);
 				}
 				return totalprice;
 			}
