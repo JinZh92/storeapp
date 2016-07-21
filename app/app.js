@@ -21,6 +21,11 @@
 				// 	}
 				// }
 			})
+			.state('shop.body',{
+				url:'shopbody',
+				templateUrl:'site/draftPartials/shop-main-body.html',
+				controller:'ShopMainController as ctrl'
+			})
 
 			.state('admin',{
 				url:'/admin',

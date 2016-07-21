@@ -109,4 +109,65 @@
 .unhidden{
 	transform: translateX(-50vw);
 }
+/*--------cart pop-out-----------*/
+.cart-container{
+	z-index: 9998;
+	overflow: hidden;
+	width: 30vw;
+	background-color: #e6e6df;
+	position: fixed;
+	top:20vh;
+	right:17%;
+	border-radius: 10px 10px 10px 10px;
+}
+.cart-inner{
+	position:relative;
+}
+.cart-list{
+	width: 100%;
+	font-size: 18px;
+}
+.cart-list p{
+	margin: 0;
+	font-size: 14px;
+}
+.cart-price{
+	display: inline-block;
+	margin: 5px 15px;
+	font-size: 18px;
+}
+.cart-button{
+	display: inline-block;
+	margin-left:7vw;
+}
+.cart-button button{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+.cart-minitext{
+	margin-top: 10px;
+	margin-left: 150px; 
+	margin-bottom: 5px;
+}
+.cart-item{
+	display:inline-block;
+}
+.item-delete{
+	position: absolute;
+	top:20px;
+	right: 10px;
+	display: inline-block;
+	background-image: url(https://cdn2.iconfinder.com/data/icons/basic-plain/512/delete_clear_Cancel_trash_recycle_bin_remove_x_cross-128.png);
+	height: 30px;
+	width: 30px;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
 

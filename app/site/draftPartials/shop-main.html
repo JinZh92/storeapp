@@ -1,3 +1,4 @@
+<!-- nav bar -->
 <nav class="navbar navbar-fixed-top">
 	<div class="container-fluid">
 		<div class="navbar-header">
@@ -5,58 +6,70 @@
 		</div>
 		<ul class="nav navbar-nav">
 			<li>
-				<a ng-click="ctrl.openCart()" href="#">
+				<a ng-click="showCart = !showCart" href="">
 					Cart
 					<span class="label label-default label-pill pull-xs-right">2
 					</span>
 				</a>
 			</li>
 	     	<li class="active" ng-click="ctrl.gotoproducts()"><a href="#">All Products</a></li>	 
-	      	<li><a href="#">Search</a></li>
-	      	<li><a ng-click="ctrl.unhide()" href="#">Menu</a></li>  
+	      	<li><a ng-click="ctrl.unhide()" href="">Menu</a></li>  
 		</ul>
 		</div>
 </nav>
 
-<div class="right-half">
-	<div ng-repeat="x in ctrl.imageUrl" ng-style="{'background-image':'url({{x}})'}" class="right-image">
-		<div class="right-image-text">I'm a Pikachu</div>
-	</div>
-
-	<div class="right-image right-image-last">
-		<div class="right-viewall"><h2>View All</h2></div>
-	</div>
-</div>	
-
-<div class="left-fixed">
-	<div class="left-content">
-		<div class="left-header">
-			<h1 id="left-header">{{ctrl.leftHeader}}</h1>
-		</div>
-		
-		<div class="left-line"></div>
-		<div class="left-body">
-			<p id="left-body">{{ctrl.leftBody}}</p>
-			<div class="left-links"></div>
-		</div>
-
-		<div class="left-links">
-			<a href="#">All goods</a>
-			<a href="#">Read more</a>
-		</div>
-		
-	</div>
-</div>
-
+<!-- Menu side bar -->
 <div ng-class="{unhidden: ctrl.showHidden}" class="hidden-panel">
 	<div class="hidden-container">
-		<div ng-click="ctrl.hide()" class="hidden-close"><a href="#">close</a></div>
+		<div ng-click="ctrl.hide()" class="hidden-close"><a href="">close</a></div>
 		<div class="hidden-menu">
 			<ul class="list-group">
-				<li class="list-group-item"><a href="#">About</a></li>
-				<li class="list-group-item"><a href="#">Contact</a></li>
-				<li class="list-group-item"><a href="#">Admin Login</a></li>
+				<li class="list-group-item"><a href="">About</a></li>
+				<li class="list-group-item"><a href="">Contact</a></li>
+				<li class="list-group-item"><a href="">Admin Login</a></li>
 			</ul>
 		</div>
 	</div>
 </div>
+
+<!-- cart pop out -->
+<div ng-show="showCart" class="cart-container">
+	<div class="cart-inner">
+		<div class="cart-list">
+			<ul class="list-group">
+				<li class="list-group-item">
+					<div class="cart-item">Cart Item 1</div>
+					<p>
+						<span>Quantity: 1</span> 
+						<span>Price: $10</span>
+					</p>
+					<div class="item-delete"></div>
+				</li>
+				<li class="list-group-item">
+					<div class="cart-item">Cart Item 2</div>
+					<p>
+						<span>Quantity: 2</span> 
+						<span>Price: $20</span>
+					</p>
+					<div class="item-delete"></div>
+				</li>
+			</ul>
+		</div>
+		<div class="cart-text">
+			<div class="cart-price">
+				Total: $30
+			</div>
+			<div class="cart-button">
+				<button>CHECKOUT NOW</button>
+			</div>
+			<div class="cart-minitext">
+				Free Shipping Brainstation-wide
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- shop main body (nested partial) -->
+<div ui-view=""></div>
+
+
