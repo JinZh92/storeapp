@@ -64,12 +64,16 @@
 			}
 		}
 		function getTotalPrice(){
+			var totalprice = 0;
 			if (cartContent.length == 0){
 				return 0;
+			} else{
+				for (var i = 0; i < cartContent.length; i++){
+					totalprice = totalprice + cartContent[i].productObj.price;
+				}
+				return totalprice;
 			}
-			for (var i = 0; i < cartContent.length; i++){
-
-			}
+			
 		}
 	}
 

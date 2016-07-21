@@ -57,7 +57,7 @@
 
 			.state('admin.dash',{
 				url:'/dashboard',
-				templateUrl:'site/draftPartials/admin-dash.html',
+				templateUrl:'site/draftPartials/admin-1.html',
 				controller:'AdminCtrl as ctrl',
 			})
 
