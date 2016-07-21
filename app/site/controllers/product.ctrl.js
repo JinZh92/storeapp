@@ -29,12 +29,11 @@
 		productVm.selector = productVm.showFilters[0];
 		// productVm.selector = "All";
 
-		productVm.popUp = popUp;
+		productVm.clickedCart = clickedCart
 
-		function popUp() {
-	  		alert('clicked go to')
-	  		// $state.go('', {});
-	  	}
+		function clickedCart() {
+	  		alert('I WISH THIS ADDED TO MY CART')
+	  	};
 
 		// productVm.product = {};
 		// productVm.product_update_btn = 'Update Product';

@@ -26,9 +26,8 @@
       <div 
         class="col-md-3 col-sm-6"
         ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
-        ng-show="ctrl.selector.showProducts(product)"
-        ng-click="ctrl.popUp()">
-          <div class="reveal"><a href="#">
+        ng-show="ctrl.selector.showProducts(product)">
+          <div class="reveal">
             <div class="img"><img src="{{product.Image}}" alt="img"></div>
             <div class="hidden">
               <div class="caption">
@@ -36,14 +35,10 @@
                   <h3>Letter {{product.Name}}</h3>
                   <p>{{product.Description}}</p>
                   <p>{{product.price | currency}}</p>
-                  <form>
-                    <fieldset class="form-group">
-                      <button>ADD TO CART</button>
-                    </fieldset>
-                  </form>
+                    <button ng-click="ctrl.clickedCart()">ADD TO CART</button>
                 </div>
               </div>
-            </div></a></div>
+            </div></div>
           </div>
       </div>
     </div>
