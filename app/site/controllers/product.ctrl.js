@@ -11,14 +11,14 @@
 
 		productVm.product = productSrv.products;
 
-		// for product sort
+//---------------------Product Sort---------------------//
 		productVm.sortOptions = [
 			{label:'Letter', sortField:'tileID'},
 			{label:'Tile Point Value', sortField:'tilePV'},
 		]
 		productVm.selectedOption = productVm.sortOptions[0];
 
-		// for product filter 
+//---------------------Product Filters---------------------//
 		productVm.showFilters = [
 			{label: 'All', showProducts: function(product) {return true;}},
 			{label: 'Vowels', showProducts: function(product) {return product.Type === "vowel"}},
@@ -29,11 +29,31 @@
 		productVm.selector = productVm.showFilters[0];
 		// productVm.selector = "All";
 
+//---------------------Product Add to Cart---------------------//
 		productVm.clickedCart = clickedCart
 
 		function clickedCart() {
 	  		alert('I WISH THIS ADDED TO MY CART')
 	  	};
+
+
+//---------------------Search Products---------------------//
+
+		// productVm.searchWord = searchWord
+
+		// function searchWord() {
+
+		// }
+
+		// productVm.list = [];
+		// productVm.text = 'hello';
+		// productVm.submit = searchWord() {
+		// 	if (productVm..text) {
+		// 		productVm.list.push(this.text);
+		// 		productVm.text = '';
+		// 	}
+		// };
+
 
 		// productVm.product = {};
 		// productVm.product_update_btn = 'Update Product';
