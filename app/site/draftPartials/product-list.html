@@ -24,14 +24,59 @@
   <body>
     <div class="row">
       <div 
+        class="col-md-3 col-sm-6"
         ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
         ng-show="ctrl.selector.showProducts(product)"
-        class="col-md-3 col-sm-6"
         ng-click="ctrl.popUp()">
-        <img src="{{product.Image}}">
+          <div class="ih-item caption effect13 bottom_to_top"><a href="#">
+            <div class="img"><img src="{{product.Image}}" alt="img"></div>
+            <div class="info">
+              <div>
+                <h3>Letter {{product.Name}}</h3>
+                <p>{{product.Description}}</p>
+                <p>{{product.price | currency}}</p>
+                <form>
+                  <fieldset class="form-group">
+                    <button>ADD TO CART</button>
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label for="selectQ">Quantity</label>
+                    <select class="form-control" id="selectQ">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </select>
+                  </fieldset>
+                </form>
+              </div>
+            </div></a></div>
+          </div>
       </div>
     </div>
 
   </body>
+
+
+<!--   <body>
+    <div class="row">
+      <div 
+        class="col-md-3 col-sm-6"
+        ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
+        ng-show="ctrl.selector.showProducts(product)"
+        ng-click="ctrl.popUp()">
+        <div class="ih-item square effect13 bottom-to-top"><a href="#">
+          <div class="img"><img src="{{product.Image}}" alt="img"></div>
+          <div class="info">
+            <h3>Letter {{product.name}}</h3>
+            <p>{{product.Description}}</p>
+            <p>Price: {{product.price | current}}</p>
+          </div>
+        </div></a>
+      </div>
+    </div>
+
+  </body> -->
 
 </div>
