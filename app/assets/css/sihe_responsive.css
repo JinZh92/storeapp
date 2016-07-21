@@ -1,0 +1,1082 @@
+.main-wrapper.sihe-container{
+    width: 100%;
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sihe-row{
+    width: 100%;text-align: center
+}
+*:before, *:after{
+    webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+* { webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.sihe-hover-map{
+    text-align: center;
+    width: 100%;
+    margin:  0 auto;
+}
+.hover-img img, .sihe-img-spin img{
+    width: 100% !important;
+    height: 100% !important
+}
+.sihe-responsive-4, .sihe-responsive-3, .sihe-responsive-2, .sihe-responsive-1 {
+
+    display: inline-block;
+    margin: 20px auto
+        
+}
+@media (max-width: 600px) {
+    .sihe-responsive-1, .sihe-responsive-2, .sihe-responsive-3, .sihe-responsive-4{
+        width: 99%;
+        min-width: 300px;
+    }
+    .sihe-hover{
+        max-width: 250px !important;
+        max-height: 250px !important;
+    }
+    
+}
+@media (max-width: 900px) {
+    .sihe-responsive-1 {
+        width: 99%;
+    }
+    .sihe-responsive-2, .sihe-responsive-3, .sihe-responsive-4{
+        width: 50%;
+        min-width: 300px;
+    }
+    
+}
+@media (max-width: 1200px) {
+    .sihe-responsive-1 {
+        width: 99%;
+    }
+    .sihe-responsive-2{
+        width: 50%;
+        min-width: 300px;
+    }
+    .sihe-responsive-3{
+        width: 33%;
+        min-width: 300px;
+    }
+    .sihe-responsive-4{
+        width: 24.5%;
+        min-width: 300px;
+    }
+    
+}
+@media (min-width: 1201px) {
+    .sihe-responsive-1 {
+        width: 99%;
+    }
+    .sihe-responsive-2{
+        width: 49%;
+        min-width: 300px;
+    }
+    .sihe-responsive-3{
+        width: 33%;
+        min-width: 300px;
+    }
+    .sihe-responsive-4{
+        width: 24.5%;
+        min-width: 250px;
+    }
+    
+}
+.sihe-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+.sihe-circle img{
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.sihe-hover img{
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sihe-hover.sihe-circle .hover-img img {
+    border-radius: 50%;
+}
+.sihe-hover.sihe-circle .hover-img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+a:hover .sihe-info-circle{
+    text-decoration: none;
+    visibility: visible;
+    opacity: 1;
+}
+a .sihe-info-circle {
+    color: #ccc;
+
+}
+.hover-img {
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    z-index:1;
+    height:100%
+}
+
+/* ------------------------------------------------------------------CIRCLE EFFECTS END-------------------------------------------------------------- */
+
+
+/* ------------------------------------------------------------------SQUARE EFFECTS STARTS------------------------------------------------------------ */
+
+
+
+.sihe-square {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #fff;
+    text-align: center;
+    margin: 0 auto;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+.sihe-info-square {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.sihe-hover.sihe-square {
+    overflow: hidden;
+}
+
+
+/*---------------------------------------------------------------------------- SQUARE EFFECTS ENDS-------------------------------------------------------- */
+
+/* --------------------------------------------------------------------HOVER CIRCLE H3 || P  EFFECTS START ----------------------------------------------*/
+
+.sihe-info-circle{
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: rgba(198, 170, 130, 0.49);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-family: "Open Sans" ;
+}
+
+.sihe-info-circle h3 , .sihe-spin-circle h3 , .sihe-info-square h3{
+    color: #fff;
+    position: relative;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0;
+    padding: 35% 0 5% 0 !important;
+    margin: 0;
+    text-shadow: 0 0 1px white, 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+.sihe-info-circle p , .sihe-spin-circle p , .sihe-info-square P{
+    color: #fff;
+    padding: 5%;
+    font-style: italic;
+    font-weight: 300;
+    margin: 0 3%;
+    font-size: 14px;
+    height:60%;
+    overflow:hidden
+}
+
+
+
+/*--------------------------------------------------------------------- HOVER CIRCLE H3 || P  EFFECTS ENDS-------------------------------------------------- */
+
+
+
+
+
+/*--------------------------------------------------------------------- BACKGROUND COLOR START -----------------------------------------------------------*/
+
+
+
+.bg-1-1{
+    background-color:rgba(80,240,60, .5)!important;
+}
+.bg-1-2{
+    background-color:rgba(190,190,190, .5)!important;
+}
+.bg-1-3{
+    background-color:rgba(128,0,128, .5)!important;
+}
+.bg-1-4{
+    background-color:rgba(0,128,128, .5)!important;
+}
+
+
+/*---------------------------------------------------------------------- BACKGROUND COLOR END-------------------------------------------------------------- */
+
+
+
+/*--------------------------------------------------------------------- COMMON EFFECTS END--------------------------------------------------------------- */
+
+
+
+
+
+/*--------------------------------------------------------------------- EFFECTS -1 STARTS ------------------------------------------------------------------*/
+
+/* -----------------------------SPIN EFFECTS-------------------------------- */
+
+
+.sihe-img-spin{
+    text-align: center;
+    position: absolute;        
+    height: 100%;
+    width: -webkit-calc(100% - 14px);
+    width: -moz-calc(100% - 14px);
+    width: calc(100% - 14px);
+    height: -webkit-calc(100% - 14px);
+    height: -moz-calc(100% - 14px);
+    height: calc(100% - 14px);
+}
+
+.sihe-spinner1 {
+    border: 10px solid #FF0080;
+    border-right-color: #FF0000;
+    border-bottom-color: #008000;
+    border-radius: 50%;
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    width: 100%;
+    height: 100%
+}
+a:hover .sihe-spinner1 {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.sihe-img-spin-1{
+    top: 14px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 14px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    right: 0;
+}
+a:hover .sihe-spin-circle{
+    text-decoration: none;
+    visibility: visible;
+    opacity: 1;
+}
+a .sihe-spin-circle {
+    color: #ccc;
+
+}
+
+.sihe-spin-circle{
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: calc(100% - 28px);
+    width: calc(100% - 28px);
+    position: absolute;
+    top: 14px;
+    background: rgba(198, 170, 130, 0.49);
+    left: 14px;
+    right: 0;
+    bottom: 0;
+
+}
+
+.sihe-circle-effect1{
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+}
+
+
+
+/*-------------------------------- EFFECTS -1 ENDS ---------------------------------*/
+
+
+
+
+/*------------------------------ EFFECTS-2 STARTS -----------------------------------*/
+
+
+.sihe-circle-effect2 a:hover .hover-img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sihe-info-circle {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+
+.sihe-circle-effect2 a:hover .sihe-info-circle {
+    visibility: visible;
+    opacity: 1;
+}
+/* TOP BOTTOM RIGHT LEFT TRANSLATE EFFECTS */
+.sihe-sihe-top-to-bottom .hover-img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-top-to-bottom .sihe-info-circle {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.sihe-top-to-bottom a:hover .hover-img {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.sihe-top-to-bottom a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+
+.sihe-bottom-to-top .hover-img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-bottom-to-top .sihe-info-circle {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+.sihe-bottom-to-top a:hover .hover-img {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.sihe-bottom-to-top a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+.sihe-left-to-right .hover-img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-left-to-right .sihe-info-circle {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.sihe-left-to-right a:hover .hover-img {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.sihe-left-to-right a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-right-to-left .hover-img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-right-to-left .sihe-info-circle {
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.sihe-right-to-left a:hover .hover-img {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.sihe-right-to-left a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-left-to-right .hover-img {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+.sihe-left-to-right .sihe-info-circle {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+    transform: translateX(100%);
+}
+.sihe-left-to-right a:hover .hover-img {
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.sihe-left-to-right a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+}
+
+/* ---------------------------TOP BOTTOM RIGHT LEFT TRANSLATE EFFECTS ENDS------------- */
+
+
+
+/*-------------------------------- EFFECTS-2 ENDS -------------------------------------*/
+
+
+/* -------------------------------EFFECTS-3 STARTS ------------------------------------*/
+
+
+
+.sihe-circle-effect-3 a:hover .hover-img {
+    opacity: 0;
+}
+.sihe-circle-effect-3 a:hover .sihe-info-circle {
+    visibility: visible;
+    opacity: 1;
+}
+.sihe-circle-effect-3 .sihe-info-circle {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.35s ease 0.35s;
+    -moz-transition: all 0.35s ease 0.35s;
+    transition: all 0.35s ease 0.35s;
+}
+
+
+
+/* -----------------------------EFFECTS-3 ENDS ----------------------------------*/
+
+
+/* ----------------------------EFFECTS-4 STARTS ----------------------------------*/
+
+
+
+/* -----------------------------SCALE EFFECTS ------------------------------------*/
+
+.sihe-circle-effect-4.sihe-left-to-right .hover-img {
+    -webkit-transform: scale(1) translateX(0);
+    -moz-transform: scale(1) translateX(0);
+    -ms-transform: scale(1) translateX(0);
+    -o-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0);
+}
+
+.sihe-circle-effect-4.sihe-left-to-right a:hover .hover-img {
+    -webkit-transform: scale(0.5) translateX(100%);
+    -moz-transform: scale(0.5) translateX(100%);
+    -ms-transform: scale(0.5) translateX(100%);
+    -o-transform: scale(0.5) translateX(100%);
+    transform: scale(0.5) translateX(100%);
+}
+
+.sihe-circle-effect-4.sihe-right-to-left .hover-img {
+    -webkit-transform: scale(1) translateX(0);
+    -moz-transform: scale(1) translateX(0);
+    -ms-transform: scale(1) translateX(0);
+    -o-transform: scale(1) translateX(0);
+    transform: scale(1) translateX(0);
+}
+.sihe-circle-effect-4.sihe-right-to-left a:hover .hover-img {
+    -webkit-transform: scale(0.5) translateX(-100%);
+    -moz-transform: scale(0.5) translateX(-100%);
+    -ms-transform: scale(0.5) translateX(-100%);
+    -o-transform: scale(0.5) translateX(-100%);
+    transform: scale(0.5) translateX(-100%);
+}
+
+.sihe-circle-effect-4 .sihe-top-to-bottom .hover-img {
+    -webkit-transform: scale(1) translateY(0);
+    -moz-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    -o-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+.sihe-circle-effect-4 .sihe-top-to-bottom a:hover .hover-img {
+    -webkit-transform: scale(0.5) translateY(100%);
+    -moz-transform: scale(0.5) translateY(100%);
+    -ms-transform: scale(0.5) translateY(100%);
+    -o-transform: scale(0.5) translateY(100%);
+    transform: scale(0.5) translateY(100%);
+}
+
+.sihe-circle-effect-4 .sihe-bottom-to-top .hover-img {
+    -webkit-transform: scale(1) translateY(0);
+    -moz-transform: scale(1) translateY(0);
+    -ms-transform: scale(1) translateY(0);
+    -o-transform: scale(1) translateY(0);
+    transform: scale(1) translateY(0);
+}
+.sihe-circle-effect-4.sihe-bottom-to-top a:hover .hover-img {
+    -webkit-transform: scale(0.5) translateY(-100%);
+    -moz-transform: scale(0.5) translateY(-100%);
+    -ms-transform: scale(0.5) translateY(-100%);
+    -o-transform: scale(0.5) translateY(-100%);
+    transform: scale(0.5) translateY(-100%);
+}
+
+/*-------------------------------- SCALE EFFECTS ---------------------------*/
+
+
+
+/*---------------------------------- EFFECTS-4 ENDS------------------------ */
+
+
+/*---------------------------------- EFFECTS-5 START------------------------ */
+
+/*------------------------------- TRANSLATE ROTATE EFFECTS------------------------ */
+
+.sihe-circle-effect-5.sihe-left-to-right .hover-img {
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+}
+.sihe-circle-effect-5.sihe-left-to-right .sihe-info-circle {
+    -webkit-transform: translateX(100%) rotate(180deg);
+    -moz-transform: translateX(100%) rotate(180deg);
+    -ms-transform: translateX(100%) rotate(180deg);
+    -o-transform: translateX(100%) rotate(180deg);
+    transform: translateX(100%) rotate(180deg);
+}
+.sihe-circle-effect-5.sihe-left-to-right a:hover .hover-img {
+    -webkit-transform: translateX(100%) rotate(180deg);
+    -moz-transform: translateX(100%) rotate(180deg);
+    -ms-transform: translateX(100%) rotate(180deg);
+    -o-transform: translateX(100%) rotate(180deg);
+    transform: translateX(100%) rotate(180deg);
+}
+.sihe-circle-effect-5.sihe-left-to-right a:hover .sihe-info-circle {
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sihe-circle-effect-5.sihe-right-to-left .hover-img {
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+}
+.sihe-circle-effect-5.sihe-right-to-left .sihe-info-circle {
+    -webkit-transform: translateX(-100%) rotate(-180deg);
+    -moz-transform: translateX(-100%) rotate(-180deg);
+    -ms-transform: translateX(-100%) rotate(-180deg);
+    -o-transform: translateX(-100%) rotate(-180deg);
+    transform: translateX(-100%) rotate(-180deg);
+}
+.sihe-circle-effect-5.sihe-right-to-left a:hover .hover-img {
+    -webkit-transform: translateX(-100%) rotate(-180deg);
+    -moz-transform: translateX(-100%) rotate(-180deg);
+    -ms-transform: translateX(-100%) rotate(-180deg);
+    -o-transform: translateX(-100%) rotate(-180deg);
+    transform: translateX(-100%) rotate(-180deg);
+}
+.sihe-circle-effect-5.sihe-right-to-left a:hover .sihe-info-circle {
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sihe-circle-effect-5.sihe-top-to-bottom .hover-img {
+    -webkit-transform: translateY(0) rotate(0);
+    -moz-transform: translateY(0) rotate(0);
+    -ms-transform: translateY(0) rotate(0);
+    -o-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+}
+.sihe-circle-effect-5.sihe-top-to-bottom .sihe-info-circle {
+    -webkit-transform: translateY(-100%) rotate(-180deg);
+    -moz-transform: translateY(-100%) rotate(-180deg);
+    -ms-transform: translateY(-100%) rotate(-180deg);
+    -o-transform: translateY(-100%) rotate(-180deg);
+    transform: translateY(-100%) rotate(-180deg);
+}
+.sihe-circle-effect-5.sihe-top-to-bottom a:hover .hover-img {
+    -webkit-transform: translateY(-100%) rotate(-180deg);
+    -moz-transform: translateY(-100%) rotate(-180deg);
+    -ms-transform: translateY(-100%) rotate(-180deg);
+    -o-transform: translateY(-100%) rotate(-180deg);
+    transform: translateY(-100%) rotate(-180deg);
+}
+.sihe-circle-effect-5.sihe-top-to-bottom a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0) rotate(0);
+    -moz-transform: translateY(0) rotate(0);
+    -ms-transform: translateY(0) rotate(0);
+    -o-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+
+.sihe-circle-effect-5.sihe-bottom-to-top .hover-img {
+    -webkit-transform: translateY(0) rotate(0);
+    -moz-transform: translateY(0) rotate(0);
+    -ms-transform: translateY(0) rotate(0);
+    -o-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+}
+.sihe-circle-effect-5.sihe-bottom-to-top .sihe-info-circle {
+    -webkit-transform: translateY(100%) rotate(180deg);
+    -moz-transform: translateY(100%) rotate(180deg);
+    -ms-transform: translateY(100%) rotate(180deg);
+    -o-transform: translateY(100%) rotate(180deg);
+    transform: translateY(100%) rotate(180deg);
+}
+.sihe-circle-effect-5.sihe-bottom-to-top a:hover .hover-img {
+    -webkit-transform: translateY(100%) rotate(180deg);
+    -moz-transform: translateY(100%) rotate(180deg);
+    -ms-transform: translateY(100%) rotate(180deg);
+    -o-transform: translateY(100%) rotate(180deg);
+    transform: translateY(100%) rotate(180deg);
+}
+.sihe-circle-effect-5.sihe-bottom-to-top a:hover .sihe-info-circle {
+    -webkit-transform: translateY(0) rotate(0);
+    -moz-transform: translateY(0) rotate(0);
+    -ms-transform: translateY(0) rotate(0);
+    -o-transform: translateY(0) rotate(0);
+    transform: translateY(0) rotate(0);
+    -webkit-transition-delay: 0.4s;
+    -moz-transition-delay: 0.4s;
+    transition-delay: 0.4s;
+}
+.sihe-circle-effect-5 a:hover .hover-img {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+/* ------------------------------EFFECTS-5 ENDS -------------------------*/
+
+
+/* ------------------------------EFFECTS-6 START------------------------ */
+
+.sihe-info-square {
+    background: #333333;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.sihe-square-effect-1.scale_up .hover-img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.sihe-square-effect-1.scale_up .sihe-info-square {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.sihe-square-effect-1.scale_up .sihe-info-square h3,
+.sihe-square-effect-1.scale_up .sihe-info-square p {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+}
+.sihe-square-effect-1.scale_up a:hover .hover-img {
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+}
+.sihe-square-effect-1.scale_up a:hover .sihe-info-square {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+.sihe-square-effect-1.scale_up a:hover .sihe-info-square h3,
+.sihe-square-effect-1.scale_up a:hover .sihe-info-square p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+
+
+
+
+
+/* ------------------------------EFFECTS-6 ENDS----------------------------- */
+
+
+
+/*----------------------------- EFFECTS-7 STARTS---------------------------- */
+
+
+.sihe-square-effect-2 .sihe-info-square {
+    background: #333333;
+    background: rgba(0, 0, 0, 0.6);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+.sihe-info-square h3 {
+    -webkit-transform: scale(4);
+    -moz-transform: scale(4);
+    -ms-transform: scale(4);
+    -o-transform: scale(4);
+    transform: scale(4);
+    -webkit-transition: all 0.35s 0.1s ease-in-out;
+    -moz-transition: all 0.35s 0.1s ease-in-out;
+    transition: all 0.35s 0.1s ease-in-out;
+}
+.sihe-info-square p {
+    -webkit-transform: scale(5);
+    -moz-transform: scale(5);
+    -ms-transform: scale(5);
+    -o-transform: scale(5);
+    transform: scale(5);
+    -webkit-transition: all 0.35s 0.3s linear;
+    -moz-transition: all 0.35s 0.3s linear;
+    transition: all 0.35s 0.3s linear;
+}
+
+.sihe-square-effect-2 a:hover .sihe-info-square {
+    visibility: visible;
+    opacity: 1;
+}
+.sihe-square-effect-2 a:hover .sihe-info-square h3,
+.sihe-square-effect-2 a:hover .sihe-info-square p {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+
+/* ---------------------------------------EFFECTS 7 ENDS---------------------------- */
+
+
+
+/*-------------------------------------- EFFECTS 8 STARTS---------------------------- */
+
+
+
+.sihe-square-effect-3 {
+    -webkit-perspective: 900px;
+    -moz-perspective: 900px;
+    perspective: 900px;
+}
+
+/* COMMON BETWEEN EFFECT 8 & 10 */
+.sihe-square-effect-3 .hover-img ,sihe-square-effect-5 .hover-img {
+    position: relative;
+    z-index: 11;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    height:100%
+}
+.sihe-main-sqr {
+    z-index: 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    background: #333333;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.sihe-main-sqr h3 , .sihe-main-sqr-2 h3 ,.sihe-main-sqr-3 h3{
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px;
+    background: #111111;
+}
+.sihe-main-sqr p, .sihe-main-sqr-2 p,.sihe-main-sqr-3 p{
+    font-style: italic;
+    font-size: 12px;
+    position: relative;
+    color: #bbb;
+    padding: 20px 20px 20px;
+    text-align: center;
+}
+
+
+/* ----------------------TRANSFORM ORIGIN COMMON EFFECTS FOR EFFECT 8 & 10--------------------*/
+
+.sihe-square-effect-3.sihe-left-to-right .hover-img, sihe-square-effect-5.sihe-left-to-right .hover-img {
+    -webkit-transform-origin: 100% 50%;
+    -moz-transform-origin: 100% 50%;
+    -ms-transform-origin: 100% 50%;
+    -o-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+}
+.sihe-square-effect-3.sihe-right-to-left .hover-img, sihe-square-effect-5.sihe-right-to-left .hover-img {
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+}
+.sihe-square-effect-3.sihe-top-to-bottom .hover-img ,sihe-square-effect-5.sihe-top-to-bottom .hover-img {
+    -webkit-transform-origin: 50% 100%;
+    -moz-transform-origin: 50% 100%;
+    -ms-transform-origin: 50% 100%;
+    -o-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+.sihe-square-effect-3.sihe-bottom-to-top .hover-img, sihe-square-effect-5.sihe-bottom-to-top .hover-img {
+    -webkit-transform-origin: 50% 0;
+    -moz-transform-origin: 50% 0;
+    -ms-transform-origin: 50% 0;
+    -o-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+}
+
+
+
+/* ----------------------ROTATE 3D EFFECTS FOR EFFECT 8 & 10 -------------------*/
+
+
+.sihe-square-effect-3.sihe-left-to-right a:hover .hover-img ,sihe-square-effect-5.sihe-left-to-right a:hover .hover-img {
+    -webkit-transform: rotate3d(0, 1, 0, 180deg);
+    -moz-transform: rotate3d(0, 1, 0, 180deg);
+    -ms-transform: rotate3d(0, 1, 0, 180deg);
+    -o-transform: rotate3d(0, 1, 0, 180deg);
+    transform: rotate3d(0, 1, 0, 180deg);
+}
+.sihe-square-effect-3.sihe-right-to-left a:hover .hover-img ,sihe-square-effect-5.sihe-right-to-left a:hover .hover-img {
+    -webkit-transform: rotate3d(0, 1, 0, -180deg);
+    -moz-transform: rotate3d(0, 1, 0, -180deg);
+    -ms-transform: rotate3d(0, 1, 0, -180deg);
+    -o-transform: rotate3d(0, 1, 0, -180deg);
+    transform: rotate3d(0, 1, 0, -180deg);
+}
+.sihe-square-effect-3.sihe-bottom-to-top a:hover .hover-img ,sihe-square-effect-5.sihe-bottom-to-top a:hover .hover-img {
+    -webkit-transform: rotate3d(1, 0, 0, 180deg);
+    -moz-transform: rotate3d(1, 0, 0, 180deg);
+    -ms-transform: rotate3d(1, 0, 0, 180deg);
+    -o-transform: rotate3d(1, 0, 0, 180deg);
+    transform: rotate3d(1, 0, 0, 180deg);
+}
+.sihe-square-effect-3.sihe-top-to-bottom a:hover .hover-img ,sihe-square-effect-5.sihe-top-to-bottom a:hover .hover-img {
+    -webkit-transform: rotate3d(1, 0, 0, -180deg);
+    -moz-transform: rotate3d(1, 0, 0, -180deg);
+    -ms-transform: rotate3d(1, 0, 0, -180deg);
+    -o-transform: rotate3d(1, 0, 0, -180deg);
+    transform: rotate3d(1, 0, 0, -180deg);
+}
+
+
+
+
+
+
+/*------------------------------- EFFECTS 8 ENDS -----------------------------*/
+
+
+/*------------------------------- EFFECTS 9 STARTS -----------------------------*/
+
+
+.sihe-main-sqr-2 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background: #333333;
+    opacity: 0;
+    -webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+}
+
+
+.sihe-square-effect-4 a:hover .hover-img {
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    transition-delay: 0
+}
+.sihe-square-effect-4 a:hover .sihe-main-sqr-2 {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-delay: 0.3s;
+    transition-delay: 0.3s;
+}
+
+
+
+/*------------------------------- EFFECTS 9 ENDS -----------------------------*/
+
+
+/*------------------------------- EFFECTS 10 STARTS -----------------------------*/
+
+
+
+.sihe-main-part-3 {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 30px;
+    background: #333333;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.square-extra-1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 8px solid #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+/*------------------------------- EFFECTS 10 ENDS -----------------------------*/
+
