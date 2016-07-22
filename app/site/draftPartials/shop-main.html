@@ -6,9 +6,9 @@
 		</div>
 		<ul class="nav navbar-nav">
 			<li ng-show="ctrl.cartContent.length != 0">
-				<a ng-click="showCart = !showCart" href="">
+				<a ng-click="ctrl.showCart = !ctrl.showCart" href="">
 					Cart
-					<span class="label label-color label-pill pull-xs-right label-newsize">{{ctrl.cartContent.length}}
+					<span class="label label-color label-pill pull-xs-right label-newsize">{{ctrl.gettotalnumber}}
 					</span>
 				</a>
 			</li>
@@ -34,7 +34,7 @@
 </div>
 
 <!-- cart pop out -->
-<div ng-show="(showCart) && (ctrl.cartContent.length != 0)" class="cart-container">
+<div ng-show="(ctrl.showCart) && (ctrl.cartContent.length != 0)" class="cart-container">
 	<div class="cart-inner">
 		<div class="cart-list">
 			<ul class="list-group">

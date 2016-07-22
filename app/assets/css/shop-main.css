@@ -19,6 +19,8 @@ body {
 }
 .navbar-nav{
 	float: right;
+	margin-right: 42px;
+	z-index: 9997;
 }
 .navbar-nav li :hover, .navbar-header :hover{
 	background-color: transparent !important;

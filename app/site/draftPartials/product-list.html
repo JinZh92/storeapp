@@ -1,5 +1,5 @@
-<div id="productList">
-  <h1 class="text-center">Current Inventory</h1>
+<div id="productList" class="productList">
+<!--   <h1 class="text-center">Current Inventory</h1> -->
 
 <!--   <a class="btn btn-primary" href="/#/">Back to Shop Home</a> -->
 
@@ -37,20 +37,20 @@
   </form>
 
   <body>
-    <div class="row">
+    <div class="row product-row">
       <div 
         class="col-md-3 col-sm-6"
         ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
         ng-show="ctrl.selector.showProducts(product)">
           <div class="reveal">
-            <div class="img"><img src="{{product.Image}}" alt="img"></div>
+            <div class="list-img"><img src="{{product.Image}}" alt="img"></div>
             <div class="hidden">
               <div class="caption">
                 <div class="centered">
                   <h3>Letter {{product.Name}}</h3>
                   <p>{{product.Description}}</p>
                   <p>{{product.price | currency}}</p>
-                    <button ng-click="ctrl.clickedCart()">ADD TO CART</button>
+                    <button ng-click="ctrl.clickedCart(product)">ADD TO CART</button>
                 </div>
               </div>
             </div></div>

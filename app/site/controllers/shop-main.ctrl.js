@@ -53,6 +53,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	}
 	function reviewpurchase(){
 		$state.go('shop.reviewpurchase');
+		ctrl.showCart = !ctrl.showCart;
 	}
 	function login(){
 		$state.go('auth');
@@ -62,6 +63,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	ctrl.cartContent = cartSrv.cartContent;
 	ctrl.totalprice = cartSrv.getTotalPrice();
 	ctrl.deletefromcart = deletefromcart;
+	ctrl.gettotalnumber = cartSrv.getNumAdded();
 
 	$scope.$watch(
 		function(){
@@ -70,6 +72,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 			console.log('detecting change')
 			ctrl.cartContent = cartSrv.cartContent;
 			ctrl.totalprice = cartSrv.getTotalPrice();
+			ctrl.gettotalnumber = cartSrv.getNumAdded();
 		}
 		,true
 	)

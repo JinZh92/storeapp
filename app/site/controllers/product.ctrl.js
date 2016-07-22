@@ -4,7 +4,7 @@
 		.module('shopApp')
 		.controller('ProductCtrl',ProductCtrl);
 
-	function ProductCtrl(productSrv, $state){
+	function ProductCtrl(productSrv, cartSrv, $state){
 		var productVm = this;
 
 		console.log(productSrv)
@@ -32,8 +32,8 @@
 //---------------------Product Add to Cart---------------------//
 		productVm.clickedCart = clickedCart
 
-		function clickedCart() {
-	  		alert('I WISH THIS ADDED TO MY CART')
+		function clickedCart(product) {
+			cartSrv.addtocart(product);
 	  	};
 
 
