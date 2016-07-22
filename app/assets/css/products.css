@@ -36,7 +36,14 @@
 #disafeature{
 	padding: 20px 50px;
 }
-
+#disafeature2{
+	padding: 10px 80px;
+	margin: auto; 
+}
+#featured2 {
+	margin-top: 10px;
+}
+/*banner*/
 .mySlides {
 	display:none;
 	padding-top: 60px;
