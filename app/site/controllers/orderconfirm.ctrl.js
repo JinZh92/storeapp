@@ -9,4 +9,10 @@ angular
  		ctrl.totalprice = cartSrv.getTotalPrice();
  		ctrl.latestAddress = cartSrv.billingAddress[cartSrv.billingAddress.length-1];
  		console.log(ctrl.latestAddress);
+ 		ctrl.browseMore = browseMore;
+
+ 		function browseMore(){
+ 			$state.go('shop.product');
+ 			cartSrv.clearCart();
+ 		}
  	}

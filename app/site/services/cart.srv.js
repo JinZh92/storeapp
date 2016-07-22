@@ -73,7 +73,20 @@
 			self.billingAddress = [];
 		}
 
-
+		//--------------Order List (Not Working Yet)-------------//
+		self.addOL = addOL;
+		self.clearOL = clearOL;
+		self.orderList = [
+		{orderQty: 2, orderPrice: 6}, 
+		{orderQty: 1, orderPrice: 3},
+		{orderQty: 5, orderPrice: 15}
+		];
+		function addOL(qty, price){
+			self.orderList.push({orderQty: qty, orderPrice: price});
+		}
+		function clearOL(){
+			self.orderList = [];
+		}
 	}
-
+ 
 })();

@@ -7,24 +7,31 @@
 
     'use strict';
 
-
-   
     angular
         .module('shopApp')
         .controller('AdminCtrl', AdminCtrl);
         
 
-    function AdminCtrl($scope,$state,productSrv, $location) {
+    function AdminCtrl($scope, $state, productSrv, $location, shopMainSrv) {
         var adminVm = this;
         adminVm.active = 0;
         adminVm.todoIndex=0;
         adminVm.currentTab = 'orders';
         
+
+//------------Not working yet------------//
         adminVm.todos = [
-            {Order: 'Order ID 1', done: false},
-            {Order: 'Order ID 2', done: false},
+            {Order: 'Order ID 1', done: true},
+            {Order: 'Order ID 2', done: true},
             {Order: 'Order ID 3', done: true}
- ];
+        ];
+
+        adminVm.addtoorder = addtoorder;
+        function addtoorder(){
+            for (var i = 0; i < self.orderList.length; i++){
+                adminVm.todos.push({Order: self.orderList[i].orderQty, done: true});
+            }
+        }
 
 adminVm.productEdit = productEdit;
 

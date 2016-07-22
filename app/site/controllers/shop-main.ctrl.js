@@ -54,6 +54,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	}
 	function gotoproducts(){
 		$state.go('shop.product');
+		ctrl.showHidden = false;
 	}
 	function gotocontact(){
 		$state.go('shop.orderconfirm') //--change later

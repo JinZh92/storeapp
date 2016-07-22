@@ -9,12 +9,13 @@
 	background-color: black;
 }
 .order-container{
-	height: 100vh;
+	height: 1000px;
 	width: 100vw;
 	background-image: url(../img/bg-1-1.gif);
 	background-size: cover;
 	background-color: rgb(134,178,171);
 	text-align: center;
+	overflow: hidden;
 }
 .order-top{
 	height: 15vh;
@@ -37,7 +38,6 @@
 .order-tr th{
 	text-align: right !important;
 }
-
 .review-container{
 	position: fixed;
 	height: 80vh;
@@ -46,4 +46,12 @@
 	padding-top: 4vh;
 	margin-top: 2vh;
 	border-radius: 15px;
+}
+.order-button{
+	position: absolute;
+	right: 130px;
+	top: 120px;
+	background-color: #CCC;
+	border-color: rgba(0,0,0,0.9);
+	border-radius: 5px;
 }

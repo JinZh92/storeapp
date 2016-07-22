@@ -24,10 +24,10 @@ angular
  		function pay(){
  			// 1. redirect to the order confirmation page
  			// 2. deduct the quantity from the inventory
- 			// 3. 
+ 			// 3. clear cart after it
  			ctrl.setBillingAddress();
  			$state.go('shop.orderconfirm');
-
+ 			cartSrv.addOL(ctrl.cartContent.length, ctrl.totalprice);
  		}
  		function goback(){
  			$state.go('shop.product');
