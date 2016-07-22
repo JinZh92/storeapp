@@ -3,7 +3,7 @@
 	height: 500px;
 	width: 47.5vw;
 	float: left;
-	background-color: rgba(134,178,171, 0.95);
+
 	position: relative;
 	margin-top: 85px;
 	margin-left: 20px;
@@ -28,7 +28,6 @@
 	width: 47vw;
 	float: right;
 	position: relative;
-	background-color: rgba(134,178,171, 0.95);
 	margin-top: 85px;
 	margin-right: 20px;
 }
@@ -37,7 +36,6 @@
 	height: 470px;
 	width: 45vw;
 	position: absolute;
-	background-color: #E0FFFF;
 	margin-left: 15px;
 	margin-top: 15px;
 }
