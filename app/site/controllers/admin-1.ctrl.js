@@ -21,9 +21,8 @@
 
 //------------Not working yet------------//
         adminVm.todos = [
-            {Order: 'Order: 03', done: false},
-            {Order: 'Order: 02', done: false},
-            {Order: 'Order: 01', done: false}
+            {Order: 'Order: 01   Products: A (2) , C (1)', done: false}
+           
         ];
 
         adminVm.addtoorder = addtoorder;
