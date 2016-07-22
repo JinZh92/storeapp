@@ -24,7 +24,8 @@
 			{label: 'Vowels', showProducts: function(product) {return product.Type === "vowel"}},
 			{label: 'Consonants', showProducts: function(product) {return product.Type === "consonant"}},
 			{label: 'Tan', showProducts: function(product) {return product.color === "tan"}},
-			// {label: 'Black', showProducts: function(product) {return product.color === "black"}}
+			{label: 'Black', showProducts: function(product) {return product.color === "black"}},
+			{label: 'Sets', showProducts: function(product) {return product.Type === "set"}}
 		]
 		productVm.selector = productVm.showFilters[0];
 		// productVm.selector = "All";
@@ -36,6 +37,22 @@
 			cartSrv.addtocart(product);
 	  	};
 
+//---------------------Slideshow---------------------//
+
+	var myIndex = 0;
+	carousel();
+
+	function carousel() {
+	    var i;
+	    var x = document.getElementsByClassName("mySlides");
+	    for (i = 0; i < x.length; i++) {
+	       x[i].style.display = "none";
+	    }
+	    myIndex++;
+	    if (myIndex > x.length) {myIndex = 1}
+	    x[myIndex-1].style.display = "block";
+	    setTimeout(carousel, 2500); // Change image every 2 seconds
+	}
 
 //---------------------Search Products---------------------//
 

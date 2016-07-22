@@ -415,7 +415,7 @@
 		"Description": "",
 		"quantity": 1,
 		"price": 3.00
-	},  {
+	}, {
 		"Name": "Blank",
 		"Type": "blank",
 		"color": "tan",		
@@ -426,6 +426,105 @@
 		"Description": "",
 		"quantity": 2,
 		"price": 3.00
+	}, {
+		"Name": "A",
+		"Type": "vowel",
+		"color": "black",		
+		"Language": "English",
+		"Image": "assets/img/a-black.png",
+		"tileID": "028",
+		"tilePV": "001",
+		"Description": "Part of the black scrabble tile collection.",
+		"quantity": 1,
+		"price": 5.00
+	}, {
+		"Name": "B",
+		"Type": "consonant",
+		"color": "black",		
+		"Language": "English",
+		"Image": "assets/img/b-black.png",
+		"tileID": "029",
+		"tilePV": "003",
+		"Description": "Part of the black scrabble tile collection.",
+		"quantity": 1,
+		"price": 5.00
+	}, {
+		"Name": "C",
+		"Type": "consonant",
+		"color": "black",		
+		"Language": "English",
+		"Image": "assets/img/c-black.png",
+		"tileID": "030",
+		"tilePV": "003",
+		"Description": "Part of the black scrabble tile collection.",
+		"quantity": 1,
+		"price": 5.00
+	}, {
+		"Name": "D",
+		"Type": "consonant",
+		"color": "black",		
+		"Language": "English",
+		"Image": "assets/img/d-black.png",
+		"tileID": "031",
+		"tilePV": "002",
+		"Description": "Part of the black scrabble tile collection.",
+		"quantity": 1,
+		"price": 5.00
+	}, {
+		"Name": "E",
+		"Type": "consonant",
+		"color": "black",		
+		"Language": "English",
+		"Image": "assets/img/e-soldout.png",
+		"tileID": "032",
+		"tilePV": "001",
+		"Description": "Part of the black scrabble tile collection.",
+		"quantity": 0,
+		"price": 5.00
+	}, {
+		"Name": "Set - English",
+		"Type": "set",
+		"color": "tan",		
+		"Language": "English",
+		"Image": "assets/img/english-set.png",
+		"tileID": "033",
+		"tilePV": "187",
+		"Description": "A complete set of tiles!",
+		"quantity": 1,
+		"price": 75.00
+	}, {
+		"Name": "Set - Arabic",
+		"Type": "set",
+		"color": "tan",		
+		"Language": "Arabic",
+		"Image": "assets/img/arabic-set.png",
+		"tileID": "034",
+		"tilePV": "187",
+		"Description": "A complete set of tiles!",
+		"quantity": 1,
+		"price": 75.00
+	}, {
+		"Name": "Set - Polish",
+		"Type": "set",
+		"color": "tan",		
+		"Language": "Polish",
+		"Image": "assets/img/polish-set.png",
+		"tileID": "035",
+		"tilePV": "187",
+		"Description": "A complete set of tiles!",
+		"quantity": 1,
+		"price": 75.00
+	}, {
+		"Name": "Set - Greek",
+		"Type": "set",
+		"color": "tan",		
+		"Language": "Greek",
+		"Image": "assets/img/greek-set.png",
+		"tileID": "036",
+		"tilePV": "187",
+		"Description": "A complete set of tiles!",
+		"quantity": 1,
+		"price": 75.00
 	}, ]
 	
 })();

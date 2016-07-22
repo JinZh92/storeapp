@@ -1,6 +1,12 @@
-.productList{
+/*jumbotron*/
+.jumbotron{
 	margin-top: 20vh;
 	padding:0 7vw;
+}
+
+/*product list*/
+.productList{
+	padding: 0 7vw;
 }
 #productList {
 	background-color: white;
@@ -13,4 +19,25 @@
 }
 .list-img{
 	margin-bottom: -10px;
+}
+
+/*features*/
+#featured {
+	float: left;
+	margin-top: 10px;
+}
+#brand{
+	height: 40px;
+/*	float: right;*/
+}
+#low-banner{
+	border: 2px black solid;
+}
+#disafeature{
+	padding: 20px 50px;
+}
+
+.mySlides {
+	display:none;
+	padding-top: 60px;
 }

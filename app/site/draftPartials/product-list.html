@@ -1,8 +1,27 @@
+<!-- <div class="jumbotron">
+  <h1>Hello, world!</h1>
+  <p>...</p>
+  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+</div> -->
+<section>
+<div class="w3-content w3-section" style="max-width:1000px">
+  <img class="mySlides" src="assets/img//banner/ambition.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/courage.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/happiness.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/jumble.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/letters.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/quantum.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/simplify.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/justice.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/truth.jpg" style="width:100%">
+  <img class="mySlides" src="assets/img/banner/verbiage.jpg" style="width:100%">
+</div>
+</section>
+
+<hr>
+
 <div id="productList" class="productList">
 <!--   <h1 class="text-center">Current Inventory</h1> -->
-
-<!--   <a class="btn btn-primary" href="/#/">Back to Shop Home</a> -->
-
   <form class="form-inline">
     <div class="form-group">
       <label for="search">Search</label>
@@ -17,21 +36,25 @@
         </span>
       </div>
 
-      <form ng-submit="submit()" ng-controller="ExampleController">
+<!--       <form ng-submit="submit()" ng-controller="ExampleController">
         Enter text and hit enter:
         <input type="text" ng-model="text" name="text" />
         <input type="submit" id="submit" value="Submit" />
         <pre>list={{list}}</pre>
-      </form>
+      </form> -->
 
     <div class="form-group">
       <label for="sort">Sort</label>
-      <select class="form-control" ng-options="x as x.label for x in ctrl.sortOptions" ng-model="ctrl.selectedOption"></select>
+      <select class="form-control" 
+        ng-options="x as x.label for x in ctrl.sortOptions" 
+        ng-model="ctrl.selectedOption"></select>
     </div>
 
     <div class="form-group">
       <label for="showing">Showing</label>
-      <select class="form-control" ng-options="x as x.label for x in ctrl.showFilters" ng-model="ctrl.selector"></select>
+      <select class="form-control" 
+        ng-options="x as x.label for x in ctrl.showFilters" 
+        ng-model="ctrl.selector"></select>
     </div>
 
   </form>
@@ -59,7 +82,7 @@
     </div>
 
   </body>
-
+</div>
 
 <!--   <body>
     <div class="row">
@@ -81,4 +104,73 @@
 
   </body> -->
 
+<hr>
+
+<!-- <div id="low-banner" class="container">
+      <img id="brand" alt="Brand" src="assets/img/brand.jpeg">
+      <p id="featured">Featured Products</p>
+</div> -->
+
+<div id="disafeature" class="w3-container">
+  <span class="w3-closebtn" onclick="this.parentElement.style.display='none'">X</span>
+    <div>
+      <h3 id="featured">Featured Products</h3>
+      <img id="brand" alt="Brand" src="assets/img/brand.jpeg">
+    </div>
+
+<div id="features">
+
+<!--     <div class="roww">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="assets/img/diamondtile.png" alt="brandtile">
+          <div class="caption">
+            <h3>Our signature branded tile</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> 
+            <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+    <div class="roww">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="assets/img/russiantiles.jpg" alt="brandtile">
+          <div class="caption">
+            <h3>Российская плитка коллекции</h3>
+            <p>Целый ряд российских Scrabble плитки!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="roww">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="assets/img/klingon.jpg" alt="brandtile">
+          <div class="caption">
+            <h3><img src="assets/img/collection-title.png"></h3>
+            <p>reH DaneH'a' DaSov scrabble roD</p>
+            <img src="assets/img/klingon.png">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="roww">
+      <div class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+          <img src="assets/img/goldtile.jpg" alt="brandtile">
+          <div class="caption">
+            <h3>Gold Tile Collection</h3>
+            <p>...</p>
+            <p><a href="#" class="btn btn-primary" role="button">Button</a> 
+            <a href="#" class="btn btn-default" role="button">Button</a></p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+</div>
 </div>
