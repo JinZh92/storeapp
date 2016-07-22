@@ -7,46 +7,26 @@
             <h3>Checkout</h3>
         </div>
  
-        <table class="table">
+        <table class="checkout" ng-repeat="x in ctrl.cartContent">
             <tr>
                 <td>
-                    Item1
+                    {{ name.Description }}
                 </td>
                 <td>
-                    20000
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Item2
+                    {{ name.quantity }}
                 </td>
                 <td>
-                    5000
+                    <span> {{ product.cost }} </span>
                 </td>
-            </tr>
-            <tr>
-                <td>
-                    Item3
-                </td>
-                <td>
-                    10000
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Item4
-                </td>
-                <td>
-                    2000
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <b>Total:</b>
-                </td>
-                <td>
-                    <b>37000</b>
-                </td>
+                <td> {{ name.quantity * name.price | currency }}</td>
+
+           <tr>
+                
+                <td> <b>Total:</b> </td>
+                
+                <td> {{ total() | currency }} </td>
+            <td>[<a href ng-click="removeItem($index)">remove</a>]</td>
+            
             </tr>
         </table>
  
@@ -60,6 +40,8 @@
 
 	</div>
 </div>
+
+
 
 
 </div>
@@ -103,8 +85,7 @@
 	</div>
 
 	<div class="button">
- 		<input type="button" class="btn btn-info" value="Back">
- 		<input type="submit" class="btn btn-info" value="Pay">
- 	</div>
+ 		<input type="button" class="btn btn-info" ng-click="ctrl.goback()" value="Back">
+ 		<input type="button" class="btn btn-info" ng-click="ctrl.pay()" value="pay">
 	
 </div>

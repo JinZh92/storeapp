@@ -1,0 +1,38 @@
+<!-- right half of the shop main page -->
+<html>
+<head>
+	<script type="text/javascript" src="assets/css/about.css"></script>
+</head>
+<body>
+
+</body>
+</html><div class="right-half">
+	<div ng-repeat="x in ctrl.imageUrl" ng-style="{'background-image':'url({{x}})'}" class="right-image">
+		<div class="right-image-text">I'm a Pikachu</div>
+	</div>
+
+	<div class="right-image right-image-last">
+		<div class="right-viewall"><h2>View All</h2></div>
+	</div>
+</div>	
+
+<!-- left half of the shop main page -->
+<div class="left-fixed">
+	<div class="left-content">
+		<div class="left-header">
+			<h1 id="left-header">About Us</h1>
+		</div>
+		
+		<div class="left-line"></div>
+		<div class="left-body">
+			<p id="left-body">{{ctrl.leftBody}}</p>
+			<div class="left-links"></div>
+		</div>
+
+		<div class="left-links">
+			<a href="#">All goods</a>
+			<a href="#">Read more</a>
+		</div>
+		
+	</div>
+</div>
