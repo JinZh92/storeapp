@@ -19,7 +19,9 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	ctrl.leftBody = shopMainSrv.leftContent[0].body;
 	ctrl.addtocart = addtocart;
 	ctrl.gohome = gohome;
+	ctrl.gotocontact = gotocontact;
 	ctrl.reviewpurchase = reviewpurchase;
+	// ctrl.animating = false;
 
 	function unhide(){
 		ctrl.showHidden = true;
@@ -30,6 +32,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	//-------------scrolling function------------// 
 	angular.element($window).bind("scroll", function($scope) {
         if (this.pageYOffset >= 1200) {
+        	// $('.left.content').addClass('animated bounceOutLeft');
 			scroll(1);
          } else if (this.pageYOffset >= 600) {
          	scroll(2);
@@ -39,6 +42,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
     });
 	function scroll (num){
 		$scope.$apply(function(){
+			// ctrl.animating = true;
 			ctrl.leftHeader = shopMainSrv.leftContent[num].header;
 			ctrl.leftBody = shopMainSrv.leftContent[num].body;
 		});
@@ -51,6 +55,12 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	function gotoproducts(){
 		$state.go('shop.product');
 	}
+	function gotocontact(){
+		$state.go('shop.orderconfirm') //--change later
+	}
+	// function gotoabout(){
+
+	// }
 	function reviewpurchase(){
 		$state.go('shop.reviewpurchase');
 		ctrl.showCart = !ctrl.showCart;
@@ -82,6 +92,8 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	function deletefromcart(product){
 		cartSrv.deleteFromCart(product);
 	}
+
+	//---------------------------------//
 
 }
 

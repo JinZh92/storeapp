@@ -36,6 +36,10 @@
 				templateUrl:'site/draftPartials/review-purchase.html',
 				controller:''
 			})
+			.state('shop.orderconfirm',{
+				url:'orderconfirm',
+				templateUrl:'site/draftPartials/order-confirm.html'
+			})
 
 			.state('auth',{
 				url:'/auth',
@@ -71,14 +75,6 @@
 				url:'/edit_product/:productId',
 				controller:'ProductCtrl as ctrl',
 				templateUrl:'site/draftPartials/admin-edit-product.html',
-			})
-
-			
-
-			.state('order-confirm',{
-				url:'/order-confirm',
-				templateUrl:'site/draftPartials/order-confirm.html',
-				controller:'AuthCtrl as ctrl',
 			})
 
 			.state('checkout',{

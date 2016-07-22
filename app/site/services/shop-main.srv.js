@@ -28,6 +28,12 @@
 		'assets/img/right-4.jpg',
 		'assets/img/right-6.jpg'
 		]
+
+		self.orderList = [
+		{orderQty:'2', orderPrice:'6'}, 
+		{orderQty:'1', orderPrice:'3'},
+		{orderQty:'5', orderPrice:'15'}
+		];
 	}
 
 })();
