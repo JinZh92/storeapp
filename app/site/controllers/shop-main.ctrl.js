@@ -19,7 +19,6 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	ctrl.leftBody = shopMainSrv.leftContent[0].body;
 	ctrl.addtocart = addtocart;
 	ctrl.gohome = gohome;
-	ctrl.gotocontact = gotocontact;
 	ctrl.gotoabout = gotoabout;
 	ctrl.reviewpurchase = reviewpurchase;
 	// ctrl.animating = false;
@@ -52,16 +51,15 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	// ------------linking between pages----------//
 	function gohome(){
 		$state.go('shop.body');
+		ctrl.showHidden = false;
 	}
 	function gotoproducts(){
 		$state.go('shop.product');
 		ctrl.showHidden = false;
 	}
-	function gotocontact(){
-		$state.go('shop.orderconfirm') //--change later
-	}
 	function gotoabout(){
-		$state.go('shop.about')
+		$state.go('shop.about');
+		ctrl.showHidden = false;
 	}
 	function reviewpurchase(){
 		$state.go('shop.reviewpurchase');
