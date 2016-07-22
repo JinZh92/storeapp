@@ -32,7 +32,7 @@
           type="text" 
           class="form-control" 
           placeholder="Search for..."
-          ng-model="ctrl.filter">
+          ng-model="ctrl.filterInput">
         <span class="input-group-btn">
           <button class="btn btn-default" ng-click="ctrl.searchText()">
             <span class="glyphicon glyphicon-search"></span>
@@ -70,7 +70,7 @@
     <div class="row product-row">
       <div 
         class="col-md-3 col-sm-6"
-        ng-repeat="product in ctrl.product | filter : ctrl.filter.searchText(input) | orderBy : ctrl.selectedOption.sortField"
+        ng-repeat="product in ctrl.product |filter:{Name:ctrl.filter}| orderBy : ctrl.selectedOption.sortField"
         ng-show="ctrl.selector.showProducts(product)">
           <div class="reveal">
             <div class="list-img"><img src="{{product.Image}}" alt="img"></div>

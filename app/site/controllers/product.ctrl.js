@@ -26,15 +26,18 @@
 			{label: 'Tan', showProducts: function(product) {return product.color === "tan"}},
 			{label: 'Black', showProducts: function(product) {return product.color === "black"}},
 			{label: 'Sets', showProducts: function(product) {return product.Type === "set"}}
-		]
+		];
+
 		productVm.selector = productVm.showFilters[0];
 		// productVm.selector = "All";
 
-		productVm.filter = productVm.searchText
-
-		function searchText() {
-			alert('clicked search')
-		};
+		//productVm.filter = productVm.searchText;
+		productVm.searchText = searchText;
+		productVm.filter = "";
+		function searchText(){
+			productVm.filter = productVm.filterInput;
+			console.log(productVm.filter);
+		}
 
 
 //---------------------Product Add to Cart---------------------//
@@ -46,20 +49,20 @@
 
 //---------------------Slideshow---------------------//
 
-	var myIndex = 0;
-	carousel();
+		var myIndex = 0;
+		carousel();
 
-	function carousel() {
-	    var i;
-	    var x = document.getElementsByClassName("mySlides");
-	    for (i = 0; i < x.length; i++) {
-	       x[i].style.display = "none";
-	    }
-	    myIndex++;
-	    if (myIndex > x.length) {myIndex = 1}
-	    x[myIndex-1].style.display = "block";
-	    setTimeout(carousel, 2500); // Change image every 2 seconds
-	}
+		function carousel() {
+		    var i;
+		    var x = document.getElementsByClassName("mySlides");
+		    for (i = 0; i < x.length; i++) {
+		       x[i].style.display = "none";
+		    }
+		    myIndex++;
+		    if (myIndex > x.length) {myIndex = 1}
+		    x[myIndex-1].style.display = "block";
+		    setTimeout(carousel, 2500); // Change image every 2 seconds
+		}
 
 
 		// productVm.list = [];
@@ -116,19 +119,19 @@
 
 //---------------------Search Products---------------------//
 
-		productVm.filter('myFilter', function () {
-		    return function (items, category) {
-		        console.log(items);
-		        var newItems = [];
-		        for (var i = 0; i < items.length; i++) {
-		            if (items[i].price[category] > 0) {
-		                newItems.push(items[i]);
-		            }
-		        };
+		// productVm.filter('myFilter', function () {
+		//     return function (items, category) {
+		//         console.log(items);
+		//         var newItems = [];
+		//         for (var i = 0; i < items.length; i++) {
+		//             if (items[i].price[category] > 0) {
+		//                 newItems.push(items[i]);
+		//             }
+		//         };
 
-		        return newItems;
-		    }
-		});
+		//         return newItems;
+		//     }
+		// });
 		
 
 })();
