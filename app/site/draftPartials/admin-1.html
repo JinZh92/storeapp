@@ -93,7 +93,7 @@
     </fieldset>
     <fieldset class="form-group">
       <button type="submit" ng-click="ctrl.productSubmit()">{{ctrl.product_update_btn}}Update</button>
-      <button type="submit" ng-click="ctrl.deleteProudct()">{{ctrl.product_delete_btn}}Delete</button>
+    <!--   <button type="submit" ng-click="ctrl.deleteProudct()">{{ctrl.product_delete_btn}}Delete</button> -->
     </fieldset>
   </div>
 </article>
@@ -190,7 +190,7 @@
                <th>Price</th>
               <th>Quantity</th>
               <th>Edit</th>
-              <th>Select</th>
+              <th>Delete</th>
             </tr>
             <tr ng-repeat="product in ctrl.products">
               <td><img src="{{product.Image}}" width="50px"></td>
@@ -202,12 +202,12 @@
 
               <td><a ng-click="ctrl.showEdit=!ctrl.showEdit; ctrl.productEdit(product)"><span class="glyphicon glyphicon-pencil"></span></a></td>
               <td><label>
-         <input ng-click="ctrl.disabled()"type="checkbox" ng-model="products.todelete"></label>
+
+         <span class="glyphicon glyphicon-remove" ng-click=""></span>
               </td>
             </tr>
           </table>
         </div>
-        <button class="pull-right btn btn-default" ng-click="ctrl.deleteProduct()">Delete</button>
         </div>
 
 
