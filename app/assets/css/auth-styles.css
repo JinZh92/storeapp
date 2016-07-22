@@ -47,6 +47,8 @@
 .login-page .btn-primary {
   background-color: #4CAF50;
   outline:none;
+  width: 363px;
+  margin-left:17px;
 }
 
 .login-page .btn-primary:hover {

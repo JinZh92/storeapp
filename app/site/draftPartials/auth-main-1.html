@@ -18,13 +18,16 @@
                 <span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
                 <input ng-model="ctrl.password" class="form-input bs-input-box stacked-input-box" type="password" name="Password" placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" ng-model="ctrl.password" />
               </div>
+
+
+               <input type="submit" value="{{ctrl.auth_btn}}" class="form-input btn btn-primary bs-form__button btn-lg stacked-input-box" ng-click="ctrl.login()" />
+
+
+            
+                <button class="form-input btn btn-primary bs-form__button btn-lg stacked-input-box" ng-click="ctrl.goback()">Back to Shop</button>
             </div>
-            <input type="submit" value="{{ctrl.auth_btn}}" class="form-input btn btn-primary bs-form__button btn-lg stacked-input-box" ng-click="ctrl.login()" />
-
-
-            <div>
-            <button class="form-input btn btn-primary bs-form__button btn-lg stacked-input-box" ng-click="ctrl.goback()">Back to Shop</button>
-          </div>
+           
+         
           </form>
           
         </div>
