@@ -3,11 +3,11 @@
 
 
 
-
 <nav class="navbar navbar-fixed-top">
     <div class="container-fluid">
-        <div class="navbar-header">
-                <a class="navbar-brand" href="#">Shoppers</a>
+        
+<div class="navbar-header">
+            <img ng-click="ctrl.gohome()" class="mainlogo" src="assets/img/logo.png">
         </div>
         <ul class="nav navbar-nav">
             <li>
@@ -47,7 +47,63 @@
       </uib-tab>
     </uib-tabset>
   </form> -->
-<!-- new -->
+<!-- new --> 
+
+<!-- cart pop out -->
+<div ng-show="ctrl.showEdit" class="red-box">
+<div class="editproductsspace">
+  <h3>
+  Edit Product 
+  </h3>
+    <span class="glyphicon glyphicon-remove leave" ng-click="ctrl.showEdit=!ctrl.showEdit"></span>
+<!--  TODO #2: Populate fields with product data -->
+<article class="product-frm">
+
+
+    <fieldset class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" name="name"  required>
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Image Url</label>
+      <input type="text" class="form-control" name="image" required>
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Description</label>
+      <textarea type="text" name="description" class="form-control" required></textarea>
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Category</label>
+      <!-- TODO #2: Set Options -->
+      <select name="category">
+      </select>
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Price</label>
+      <input type="number" name="price" class="form-control"  required>
+    </fieldset>
+    <fieldset class="form-group">
+      <label>Quantity</label>
+      <input type="number" name="quantity"  required class="form-control">
+    </fieldset>
+    <fieldset class="form-group">
+      <button type="submit" >{{ctrl.product_update_btn}}Update</button>
+      <button type="submit" >{{ctrl.product_delete_btn}}Delete</button>
+    </fieldset>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+</div>
+
 
  
 
@@ -123,18 +179,21 @@
         <div ng-show="ctrl.is_products">
           <table class="products-list table">
             <tr>
-              <th>Category</th>
+              <th>Image</th>
               <th>Name</th>
-              <th>Price</th>
+              <th>Category</th>
+               <th>Price</th>
               <th>Quantity</th>
-              <th>&nbsp;</th>
+              <th>Edit</th>
             </tr>
             <tr ng-repeat="product in ctrl.products">
-              <td>{{product.category}}</td>
-              <td>{{product.name}}</td>
-              <td>{{product.price}}</td>
+              <td><img src="{{product.Image}}" width="50px"></td>
+              <td>{{product.Name}}</td>
+              <td>{{product.Type}}</td>
+              
+              <td>${{product.price}}.00</td>
               <td>{{product.quantity}}</td>
-              <td><a ng-click="ctrl.editProduct(product)">Edit</a></td>
+              <td><a ng-click="ctrl.showEdit=!ctrl.showEdit"><span class="glyphicon glyphicon-pencil"></span></a></td>
             </tr>
           </table>
         </div>

@@ -1,4 +1,16 @@
+.productList{
+	margin-top: 20vh;
+	padding:0 7vw;
+}
 #productList {
 	background-color: white;
 }
-
+.product-row{
+	padding: 0px 0px;
+}
+.row{
+	margin-left: -60px;
+}
+.list-img{
+	margin-bottom: -10px;
+}

@@ -6,64 +6,8 @@
 
 	function cart() {
 		var self = this;
-
-		// self.cartContent = [
-		// {productObj: {
-		// "Name": "I",
-		// "Consonant": false,
-		// "Type": "vowel",
-		// "color": "tan",
-		// "Language": "English",
-		// "Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636441",
-		// "tileID": "009",
-		// "tilePV": "001",
-		// "Description": "",
-		// "quantity": 9,
-		// "price": 3.00
-		// }, quantity: 1},
-		// {productObj: {
-		// "Name": "E",
-		// "Consonant": false,
-		// "Type": "vowel",
-		// "color": "tan",
-		// "Language": "English",
-		// "Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910182",
-		// "tileID": "005",
-		// "tilePV": "001",
-		// "Description": "",
-		// "quantity": 12,
-		// "price": 3.00
-		// }, quantity: 2} 
-		// ];
-
-		self.cartContent = [
-		{productObj: {
-		"Name": "I",
-		"Consonant": false,
-		"Type": "vowel",
-		"color": "tan",
-		"Language": "English",
-		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70636441",
-		"tileID": "009",
-		"tilePV": "001",
-		"Description": "",
-		"quantity": 9,
-		"price": 3.00
-		}, quantity: 1},
-		{productObj: {
-		"Name": "E",
-		"Consonant": false,
-		"Type": "vowel",
-		"color": "tan",
-		"Language": "English",
-		"Image": "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=63910182",
-		"tileID": "005",
-		"tilePV": "001",
-		"Description": "",
-		"quantity": 12,
-		"price": 3.00
-		}, quantity: 2} 
-		];
+		//--------entry cart---------//
+		self.cartContent = [];
 		self.addtocart = addtocart;
 		self.getNumAdded = getNumAdded;
 		self.clearCart = clearCart;
@@ -71,10 +15,11 @@
 		self.getTotalPrice = getTotalPrice;
 
 		function addtocart(product){
+			console.log('adding to cart')
 			var found = false;
-			for (var i = 0; i < cartContent.length; i++){
-				if (cartContent[i].productObj == product){
-					cartContent[i].quantity ++;
+			for (var i = 0; i < self.cartContent.length; i++){
+				if (self.cartContent[i].productObj == product){
+					self.cartContent[i].quantity ++;
 					found = true;
 				}
 			}
@@ -83,7 +28,15 @@
 			}
 		}
 		function getNumAdded(){
-			return self.cartContent.length;
+			var totalnumber = 0;
+			if (self.cartContent.length == 0){
+				return 0;
+			} else{
+				for (var i = 0; i < self.cartContent.length; i++){
+					totalnumber = totalnumber + self.cartContent[i].quantity;
+				}
+				return totalnumber;
+			}
 		}
 		function clearCart(){
 			self.cartContent = [];
