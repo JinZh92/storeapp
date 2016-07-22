@@ -37,3 +37,13 @@
 .order-tr th{
 	text-align: right !important;
 }
+
+.review-container{
+	position: fixed;
+	height: 80vh;
+	width: 92vw;
+	border: 1px solid;
+	padding-top: 4vh;
+	margin-top: 2vh;
+	border-radius: 15px;
+}

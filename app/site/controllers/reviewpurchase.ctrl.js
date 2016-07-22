@@ -18,7 +18,7 @@ angular
 
  		//-----function-----//
  		ctrl.pay = pay;
- 		ctrl.back = back;
+ 		ctrl.goback = goback;
  		ctrl.setBillingAddress = setBillingAddress;
 
  		function pay(){
@@ -29,7 +29,7 @@ angular
  			$state.go('shop.orderconfirm');
 
  		}
- 		function back(){
+ 		function goback(){
  			$state.go('shop.product');
  		}
  		function setBillingAddress(){
