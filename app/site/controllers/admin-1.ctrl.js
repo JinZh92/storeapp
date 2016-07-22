@@ -66,12 +66,21 @@ if (adminVm.ProductID === adminVm.products[index].tileID){
   }
 }
 
-adminVm.deleteProduct=deleteProduct;
-function deleteProduct(){
+// adminVm.deleteProduct=deleteProduct;
+// function deleteProduct(){
+
+//     for (var index=0; index < adminVm.products.length; index++){
+
+//             console.log(adminVm.products[index]);
+//         if (adminVm.products[index].done==true){
+
+//         adminVm.products.splice(index);
+ 
+//         }
     
 
 
-}
+// }
 
 
 
@@ -117,6 +126,9 @@ function deleteProduct(){
         }
 
       
+
+
+
 
 
 
