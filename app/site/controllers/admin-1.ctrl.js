@@ -36,9 +36,6 @@ function productEdit (product){
     adminVm.productPrice = product.price;
     adminVm.productQuantity = product.quantity;
     adminVm.ProductID=product.tileID;
-
-
-
 }
 /// for loop for all the array of products shown see which one equals product tile ID
 
@@ -61,28 +58,19 @@ if (adminVm.ProductID === adminVm.products[index].tileID){
       adminVm.products[index].price =  adminVm.productPrice;
       adminVm.products[index].quantity = adminVm.productQuantity;
 
-        }
+    }
 
   }
 }
 
-adminVm.deleteProduct=deleteProduct;
+adminVm.deleteProduct = deleteProduct;
 function deleteProduct(product){
 
-    for (var index=0; index < adminVm.products.length; index++){
-
-            console.log(adminVm.products[index]);
-        if (adminVm.products[index].done==true){
-
-        adminVm.products.splice(index);
- 
-        }
-    
-
+    var index = adminVm.products.indexOf(product);
+    console.log(product);
+    adminVm.products.splice(index, 1);
 
 }
-
-
 
 
 
@@ -125,13 +113,6 @@ function deleteProduct(product){
             // $location.path('/');
         }
 
-      
-
-
-
-
-
-
 
  this.click = click;
 
@@ -146,8 +127,8 @@ function deleteProduct(product){
  
         }
     }
- adminVm.isDisabled = true;
-} 
+        adminVm.isDisabled = true;
+    } 
 
 
 
@@ -171,17 +152,6 @@ function disabled(){
 adminVm.disabled();
 
 
-
-
-    
-
-
-
-
-
-
-
-
     this.submit = submit;
 
     function submit(){
@@ -193,26 +163,6 @@ adminVm.disabled();
     
 
     }
-    
-      
-
-
-
-       
-
-
-        // todoVm.submit = function() {
-        // if (todoVm.text) {
-        //   todoVm.todos.push(this.text);
-        //   todo.text = '';
-        // }}
-
-
-
-
-
-
-
 
 
         adminVm.filters = [
