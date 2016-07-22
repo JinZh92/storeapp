@@ -20,6 +20,7 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	ctrl.addtocart = addtocart;
 	ctrl.gohome = gohome;
 	ctrl.gotocontact = gotocontact;
+	ctrl.gotoabout = gotoabout;
 	ctrl.reviewpurchase = reviewpurchase;
 	// ctrl.animating = false;
 
@@ -59,9 +60,9 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	function gotocontact(){
 		$state.go('shop.orderconfirm') //--change later
 	}
-	// function gotoabout(){
-
-	// }
+	function gotoabout(){
+		$state.go('shop.about')
+	}
 	function reviewpurchase(){
 		$state.go('shop.reviewpurchase');
 		ctrl.showCart = !ctrl.showCart;

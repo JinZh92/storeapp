@@ -36,7 +36,10 @@
 				templateUrl:'site/draftPartials/order-confirm.html',
 				controller:'OrderConfirmCtrl as ctrl'
 			})
-
+			.state('shop.about', {
+				url:'about',
+				templateUrl:'site/draftPartials/about.html',
+			})
 			.state('auth',{
 				url:'/auth',
 				templateUrl:'site/draftPartials/auth-main-1.html',
