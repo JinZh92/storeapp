@@ -26,6 +26,52 @@
             {Order: 'Order ID 3', done: true}
  ];
 
+adminVm.productEdit = productEdit;
+
+function productEdit (product){
+    console.log(product);
+    adminVm.productImage = product.Image
+    adminVm.productName = product.Name;
+    adminVm.productType =  product.Type;
+    adminVm.productPrice = product.price;
+    adminVm.productQuantity = product.quantity;
+    adminVm.ProductID=product.tileID;
+
+
+
+}
+/// for loop for all the array of products shown see which one equals product tile ID
+
+
+//ctrl.is_products
+
+    adminVm.productSubmit= productSubmit; 
+
+function productSubmit (){
+
+ for (var index=0; index < adminVm.products.length; index++){
+
+    console.log(adminVm.products[index].tileID);
+
+if (adminVm.ProductID === adminVm.products[index].tileID){
+
+  adminVm.products[index].Image = adminVm.productImage; 
+    adminVm.products[index].Name = adminVm.productName;
+      adminVm.products[index].Type = adminVm.productType;
+      adminVm.products[index].price =  adminVm.productPrice;
+      adminVm.products[index].quantity = adminVm.productQuantity;
+
+        }
+
+  }
+}
+
+adminVm.deleteProduct=deleteProduct;
+function deleteProduct(){
+    
+
+
+}
 
 
 

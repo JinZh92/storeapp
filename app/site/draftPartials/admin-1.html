@@ -60,35 +60,40 @@
 <article class="product-frm">
 
 
+<!-- ng-model attached to variable - then when you click on the edit button it should pass in what you are using -->
+
+
     <fieldset class="form-group">
       <label>Name</label>
-      <input type="text" class="form-control" name="name"  required>
+      <input type="text" class="form-control" name="name"  required ng-model="ctrl.productName">
     </fieldset>
     <fieldset class="form-group">
       <label>Image Url</label>
-      <input type="text" class="form-control" name="image" required>
+      <input type="text" class="form-control" name="image" required ng-model="ctrl.productImage">
     </fieldset>
     <fieldset class="form-group">
       <label>Description</label>
       <textarea type="text" name="description" class="form-control" required></textarea>
     </fieldset>
     <fieldset class="form-group">
-      <label>Category</label>
+        <label>Category</label>
+      <select name="category"class="form-control" ng-model="ctrl.productType" required>
+      <option>consonant</option>
+      <option>vowel</option>
       <!-- TODO #2: Set Options -->
-      <select name="category">
       </select>
     </fieldset>
     <fieldset class="form-group">
       <label>Price</label>
-      <input type="number" name="price" class="form-control"  required>
+      <input type="number" name="price" class="form-control"  required ng-model="ctrl.productPrice">
     </fieldset>
     <fieldset class="form-group">
       <label>Quantity</label>
-      <input type="number" name="quantity"  required class="form-control">
+      <input type="number" name="quantity"  required class="form-control" ng-model="ctrl.productQuantity">
     </fieldset>
     <fieldset class="form-group">
-      <button type="submit" >{{ctrl.product_update_btn}}Update</button>
-      <button type="submit" >{{ctrl.product_delete_btn}}Delete</button>
+      <button type="submit" ng-click="ctrl.productSubmit()">{{ctrl.product_update_btn}}Update</button>
+      <button type="submit" ng-click="ctrl.deleteProudct()">{{ctrl.product_delete_btn}}Delete</button>
     </fieldset>
   </div>
 </article>
@@ -193,7 +198,7 @@
               
               <td>${{product.price}}.00</td>
               <td>{{product.quantity}}</td>
-              <td><a ng-click="ctrl.showEdit=!ctrl.showEdit"><span class="glyphicon glyphicon-pencil"></span></a></td>
+              <td><a ng-click="ctrl.showEdit=!ctrl.showEdit; ctrl.productEdit(product)"><span class="glyphicon glyphicon-pencil"></span></a></td>
             </tr>
           </table>
         </div>
@@ -240,16 +245,9 @@
   <fieldset class="form-group">
     <label>Category</label>
     <select class="form-control" ng-model="ctrl.category" required>
-      <option>Category 1</option>
-      <option>Category 2</option>
-      <option>Category 3</option>
-      <option>Category 4</option>
-      <option>Category 5</option>
-      <option>Category 6</option>
-      <option>Category 7</option>
-      <option>Category 8</option>
-      <option>Category 9</option>
-      <option>Category 10</option>
+      <option>consonant</option>
+      <option>vowel</option>
+    
      
      
 
