@@ -20,3 +20,30 @@ nav .container-fluid a{
 
 form.tab-form-demo .tab-pane {
     margin: 20px 20px;
+}
+
+.red-box {
+	
+
+}
+
+.editproductsspace {
+
+	
+	padding: 40px;
+	position: relative;
+	border: black 4px solid;
+
+
+}
+
+.leave {
+	position: absolute;
+	right: 10px;
+	top: 20px;
+
+}
+
+
+
+
