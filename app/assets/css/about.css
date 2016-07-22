@@ -1,6 +1,7 @@
-body {
-	font-family: 'Montserrat', sans-serif !important;
+/*.body {
+	background: red;
 }
+
 .main-container{
 	height: 100vh;
 	width: 100vw;
@@ -9,50 +10,31 @@ body {
 	padding: 0px;
 	position: relative;
 }
-/*-------index page nav bar-------*/
-.container-fluid{
-	padding-top: 20px;
-	padding-left: 5vw;
-}
-.container-fluid a{
-	color: black !important;
-}
-.navbar-nav{
-	float: right;
-}
-.navbar-nav li :hover, .navbar-header :hover{
-	background-color: transparent !important;
-/*	cursor: default;*/
-}
+
 
 .image {
 	position: absolute;
 	border-radius: 25px;
-	width: 1220px;
-    height: 500px;
+	width: 600px;
+    height: 1000px;
 	background-image: url(http://d.fastcompany.net/multisite_files/codesign/imagecache/1280/TypefaceScrabble_lede.jpg);
-	top: 100px;
+	top: 10px;
 	margin-left: 20px;
 	margin-right: 20px;
-}	
+}*/
 
-.line {
-	background-color: grey;
-	height: 1px;
-	width: 600px;
-	position: absolute;
-	margin-left: 350px;
-	top: 730px;
+
+img {
+	height: 100%;
+
 }
-.line2 {
-	background-color: grey;
-	height: 1px;
-	width: 600px;
-	position: absolute;
-	margin-left: 350px;
-	top: 733px;
+
+.hide-this
+{
+
+	overflow:hidden;
 }
-.bio {
+/*.bio {
 	position: absolute;
 	height: 350px;
 	width: 900px;
@@ -62,15 +44,11 @@ body {
 	margin-left: 200px;
 }
 .aboutUs {
+	font-family: 'Montserrat', sans-serif !important;
 	position: relative;
 	font-size: 40px;
 	top: 665px;
 	text-align: center;
 }
+*/
 
-.info {
-	top: 20px;
-	padding: 25px;
-	position: relative;
-	
-}
