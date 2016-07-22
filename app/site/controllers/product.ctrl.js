@@ -30,6 +30,13 @@
 		productVm.selector = productVm.showFilters[0];
 		// productVm.selector = "All";
 
+		productVm.filter = productVm.searchText
+
+		function searchText() {
+			alert('clicked search')
+		};
+
+
 //---------------------Product Add to Cart---------------------//
 		productVm.clickedCart = clickedCart
 
@@ -54,13 +61,6 @@
 	    setTimeout(carousel, 2500); // Change image every 2 seconds
 	}
 
-//---------------------Search Products---------------------//
-
-		// productVm.searchWord = searchWord
-
-		// function searchWord() {
-
-		// }
 
 		// productVm.list = [];
 		// productVm.text = 'hello';
@@ -113,5 +113,22 @@
 		// 	//update text in button
 		// }
 	}
+
+//---------------------Search Products---------------------//
+
+		productVm.filter('myFilter', function () {
+		    return function (items, category) {
+		        console.log(items);
+		        var newItems = [];
+		        for (var i = 0; i < items.length; i++) {
+		            if (items[i].price[category] > 0) {
+		                newItems.push(items[i]);
+		            }
+		        };
+
+		        return newItems;
+		    }
+		});
+		
 
 })();

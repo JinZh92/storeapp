@@ -7,7 +7,7 @@
 <div class="w3-content w3-section" style="max-width:1000px">
   <img class="mySlides" src="assets/img//banner/ambition.jpg" style="width:100%">
   <img class="mySlides" src="assets/img/banner/courage.jpg" style="width:100%">
-  <img class="mySlides" src="assets/img/banner/happiness.jpg" style="width:100%">
+<!--   <img class="mySlides" src="assets/img/banner/happiness.jpg" style="width:100%"> -->
   <img class="mySlides" src="assets/img/banner/jumble.jpg" style="width:100%">
   <img class="mySlides" src="assets/img/banner/letters.jpg" style="width:100%">
   <img class="mySlides" src="assets/img/banner/quantum.jpg" style="width:100%">
@@ -28,13 +28,18 @@
     </div>
 
       <div class="input-group">
-        <input type="text" class="form-control" placeholder="Search for...">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Search for..."
+          ng-model="ctrl.filter">
         <span class="input-group-btn">
-          <button type="submit" class="btn btn-default" id="submit-search">
+          <button class="btn btn-default" ng-click="ctrl.searchText()">
             <span class="glyphicon glyphicon-search"></span>
           </button>
         </span>
       </div>
+
 
 <!--       <form ng-submit="submit()" ng-controller="ExampleController">
         Enter text and hit enter:
@@ -45,14 +50,16 @@
 
     <div class="form-group">
       <label for="sort">Sort</label>
-      <select class="form-control" 
+      <select 
+        class="form-control" 
         ng-options="x as x.label for x in ctrl.sortOptions" 
         ng-model="ctrl.selectedOption"></select>
     </div>
 
     <div class="form-group">
       <label for="showing">Showing</label>
-      <select class="form-control" 
+      <select 
+        class="form-control" 
         ng-options="x as x.label for x in ctrl.showFilters" 
         ng-model="ctrl.selector"></select>
     </div>
@@ -63,7 +70,7 @@
     <div class="row product-row">
       <div 
         class="col-md-3 col-sm-6"
-        ng-repeat="product in ctrl.product | orderBy : ctrl.selectedOption.sortField"
+        ng-repeat="product in ctrl.product | filter : ctrl.filter.searchText(input) | orderBy : ctrl.selectedOption.sortField"
         ng-show="ctrl.selector.showProducts(product)">
           <div class="reveal">
             <div class="list-img"><img src="{{product.Image}}" alt="img"></div>
