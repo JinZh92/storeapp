@@ -16,14 +16,14 @@
         var adminVm = this;
         adminVm.active = 0;
         adminVm.todoIndex=0;
-        adminVm.currentTab = 'orders';
+        adminVm.currentTab = 'products';
         
 
 //------------Not working yet------------//
         adminVm.todos = [
-            {Order: 'Order ID 1', done: true},
-            {Order: 'Order ID 2', done: true},
-            {Order: 'Order ID 3', done: true}
+            {Order: 'Order: 03', done: false},
+            {Order: 'Order: 02', done: false},
+            {Order: 'Order: 01', done: false}
         ];
 
         adminVm.addtoorder = addtoorder;
