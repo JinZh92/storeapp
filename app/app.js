@@ -15,11 +15,6 @@
 				url:'/',
 				templateUrl:'site/draftPartials/shop-main.html',
 				controller:'ShopMainController as ctrl'
-				// resolve:{
-				// 	products:function(productSrv){
-				// 		return productSrv.getProducts();
-				// 	}
-				// }
 			})
 			.state('shop.body',{
 				url:'shop',
@@ -34,11 +29,12 @@
 			.state('shop.reviewpurchase',{
 				url:'reviewpurchase',
 				templateUrl:'site/draftPartials/review-purchase.html',
-				controller:''
+				controller:'ReviewPurchaseCtrl as ctrl'
 			})
 			.state('shop.orderconfirm',{
 				url:'orderconfirm',
-				templateUrl:'site/draftPartials/order-confirm.html'
+				templateUrl:'site/draftPartials/order-confirm.html',
+				controller:'OrderConfirmCtrl as ctrl'
 			})
 
 			.state('auth',{

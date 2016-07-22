@@ -14,6 +14,7 @@
 		self.deleteFromCart = deleteFromCart;
 		self.getTotalPrice = getTotalPrice;
 
+
 		function addtocart(product){
 			console.log('adding to cart')
 			var found = false;
@@ -56,9 +57,23 @@
 					totalprice = totalprice + (self.cartContent[i].productObj.price * self.cartContent[i].quantity);
 				}
 				return totalprice;
-			}
-			
+			}	
 		}
+		//-------------Billing Address----------//
+
+		self.billingAddress = [];
+		
+		self.addBillingAddress = addBillingAddress;
+		self.clearBillingAddress = clearBillingAddress;
+
+		function addBillingAddress(first, last, address, city, province){
+			self.billingAddress.push({first: first,last:last, address: address, city: city, province: province});
+		}
+		function clearBillingAddress(){
+			self.billingAddress = [];
+		}
+
+
 	}
 
 })();

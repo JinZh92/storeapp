@@ -5,9 +5,11 @@
 	<div class="order-top">
 		<div class="order-address">
 			Name:
-			<div class="order-name">BrainStation</div>
+			<div class="order-name">{{ctrl.latestAddress.first + ' ' + ctrl.latestAddress.last}}</div>
 			Address:
-			<div class="order-address"> 460 King Street West, Toronto, ON </div>
+			<div class="order-address"> 
+				{{ctrl.latestAddress.address + ',' +ctrl.latestAddress.city + ',' + ctrl.latestAddress.province}} 
+			</div>
 		</div>
 		<div class="order-date">Date Ordered: Jun-23-2016</div>
 	</div>
@@ -23,17 +25,17 @@
 					<th>Order Status</th>
 				</tr>
 
-				<tr>
-					<td class="order-prodname">letter 1</td>
-					<td class="order-prodprice">3</td>
-					<td class="order-prodqty">3</td>
+				<tr ng-repeat="x in ctrl.cartContent">
+					<td class="order-prodname">Scrabbler Letter "{{x.productObj.Name}}"</td>
+					<td class="order-prodprice">${{x.productObj.price}}</td>
+					<td class="order-prodqty">{{x.quantity}}</td>
 					<td class="order-shipped">Order Shipped.</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td></td>
-					<td>Subtotal:</td>
-					<td></td>
+					<td>Subtotal: </td>
+					<td>{{ ctrl.totalprice | currency }}</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -44,8 +46,8 @@
 				<tr>
 					<td></td>
 					<td></td>
-					<td>Grand Total:</td>
-					<td></td>
+					<td>Grand Total: </td>
+					<td>{{ ctrl.totalprice + 5 | currency }}</td>
 				</tr>
 		</div>
 		<div class="order-button">

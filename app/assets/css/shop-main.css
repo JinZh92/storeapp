@@ -60,6 +60,7 @@ body {
 	position: relative;
 }
 .right-image-last{
+	background-color: rgb(134,178,171);
 	background-image: url('https://gtac80design.files.wordpress.com/2012/02/dp-scamper-scrabble-tiles-001.jpg');
 }
 .right-viewall{
