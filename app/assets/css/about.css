@@ -24,7 +24,7 @@
 }*/
 
 
-img {
+.about-page img {
 	height: 100%;
 
 }
@@ -34,6 +34,13 @@ img {
 
 	overflow:hidden;
 }
+
+
+.about-us-about {
+	padding: 50px;
+}
+
+
 /*.bio {
 	position: absolute;
 	height: 350px;
