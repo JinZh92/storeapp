@@ -2,9 +2,9 @@ body {
 	font-family: 'Montserrat', sans-serif !important;
 }
 .main-container{
-	height: 100vh;
+	height: 1300px;
 	width: 100vw;
-	background-color: white;
+	background-color: rgb(134,178,171);
 	margin: 0px;
 	padding: 0px;
 	position: relative;
@@ -50,6 +50,10 @@ body {
 	top: 0px;
 	background-color: #dcc6b5;
 }
+.right-half{
+	/*margin-left: -100vw;*/
+	z-index: 50;
+}
 .right-image{
 	width: 100%;
 	height: 50%;
@@ -77,6 +81,12 @@ body {
 }
 /*-------index page left half-------*/
 .left-fixed{
+	width: 100vw;
+	height: 100%;
+	background-color: rgb(134,178,171);
+}
+.left-content{
+	display: inline-block;
 	padding: 20vh 5vw; 
 	width: 50vw;
 	height: 100%;
@@ -84,6 +94,7 @@ body {
 	position:fixed;
 	top:0px;
 	left: 0px;
+	border-width: 0;
 }
 .left-header h1{
 	font-size: 40px;
@@ -205,5 +216,32 @@ body {
 	background-size: contain;
 	background-repeat: no-repeat;
 }
+/*--------Angular Animation--------*/
+.left-content{
+	animation-name: slideInRight;
+	animation-duration: 2s;
+}
+.left-content.ng-hide{
+	animation-name: slideOutLeft;
+	animation-duration: 2s;
+}
 
+/*[ui-view]#left-header{
+	transition: 1s linear all;
+}
+[ui-view]#left-header .ng-enter{
+	opacity: 0;
+}
+[ui-view]#left-header .ng-enter-active{
+	opacity: 1;
+}
+[ui-view]#left-header .ng-leave{
 
+}
+[ui-view]#left-body .ng-enter{
+
+}
+[ui-view]#left-body .ng-leave{
+
+}
+*/

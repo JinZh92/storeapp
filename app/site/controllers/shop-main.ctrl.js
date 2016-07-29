@@ -15,6 +15,8 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	ctrl.login = login;
 	ctrl.imageUrl = shopMainSrv.rightImage;
 
+	ctrl.whichLeftContent = 0;
+	ctrl.leftContent = shopMainSrv.leftContent;
 	ctrl.leftHeader = shopMainSrv.leftContent[0].header;
 	ctrl.leftBody = shopMainSrv.leftContent[0].body;
 	ctrl.addtocart = addtocart;
@@ -32,7 +34,6 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
 	//-------------scrolling function------------// 
 	angular.element($window).bind("scroll", function($scope) {
         if (this.pageYOffset >= 1200) {
-        	// $('.left.content').addClass('animated bounceOutLeft');
 			scroll(1);
          } else if (this.pageYOffset >= 600) {
          	scroll(2);
@@ -42,9 +43,9 @@ function ShopMainController($scope,$state,cartSrv,shopMainSrv,$window,$timeout){
     });
 	function scroll (num){
 		$scope.$apply(function(){
-			// ctrl.animating = true;
-			ctrl.leftHeader = shopMainSrv.leftContent[num].header;
-			ctrl.leftBody = shopMainSrv.leftContent[num].body;
+			ctrl.whichLeftContent = num;
+			// ctrl.leftHeader = shopMainSrv.leftContent[num].header;
+			// ctrl.leftBody = shopMainSrv.leftContent[num].body;
 		});
 	}
 	

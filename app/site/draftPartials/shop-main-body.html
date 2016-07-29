@@ -13,21 +13,31 @@
 
 <!-- left half of the shop main page -->
 <div class="left-fixed">
-	<div class="left-content">
-		<div class="left-header">
-			<h1 id="left-header">{{ctrl.leftHeader}}</h1>
-		</div>
-		
-		<div class="left-line"></div>
-		<div class="left-body">
-			<p id="left-body">{{ctrl.leftBody}}</p>
-			<div class="left-links"></div>
-		</div>
+	<div class="left-content" ng-show="ctrl.whichLeftContent === $index " ng-repeat="content in ctrl.leftContent track by $index">
+		<h1 id="left-header">{{content.header}}</h1>
 
+		<div class="left-line"></div>
+
+		<div class="left-body">
+			<p id="left-body">{{content.body}}</p>
+		<div class="left-links"></div>
+		
 		<div class="left-links">
 			<a ng-click="ctrl.gotoproducts()" href="">All goods</a>
 			<a ng-click="" href="">Read more</a>
 		</div>
+	</div>
+<!-- 		<div class="left-header">
+			<h1 id="left-header">{{ctrl.leftHeader}}</h1>
+		</div> -->
+		
+		<!-- <div class="left-line"></div> -->
+		<!-- <div class="left-body">
+			<p id="left-body">{{ctrl.leftBody}}</p>
+			<div class="left-links"></div>
+		</div> -->
+
+		
 		
 	</div>
 </div>
