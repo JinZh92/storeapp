@@ -4,7 +4,7 @@ body {
 .main-container{
 	height: 1300px;
 	width: 100vw;
-	background-color: rgb(134,178,171);
+	background-color: white;
 	margin: 0px;
 	padding: 0px;
 	position: relative;
@@ -219,11 +219,11 @@ body {
 /*--------Angular Animation--------*/
 .left-content{
 	animation-name: slideInRight;
-	animation-duration: 2s;
+	animation-duration: 1.5s;
 }
 .left-content.ng-hide{
 	animation-name: slideOutLeft;
-	animation-duration: 2s;
+	animation-duration: 1.5s;
 }
 
 /*[ui-view]#left-header{
